@@ -1,0 +1,260 @@
+release notes
+
+project: Phywirte
+
+=======================================================================
+version: Phywirte V2.1
+SVN location:
+\Phywirte\SW\MainApplicationV2.1
+
+升级内容:
+1）增加csv文件烧录程序
+2）修复MAC地址和csv文件超出的显示bug
+
+version: Phywirte V2.2
+SVN location:
+\Phywirte\SW\MainApplicationV2.2
+
+升级内容:
+1）fix bugs
+2）修改cmd格式，统一成8 byte，缩短烧录时间
+
+version: Phywirte V2.3.a
+SVN location:
+\Phywirte\SW\MainApplicationV2.3.a
+
+升级内容:
+1）面板增加校准和版本信息
+2）面板显示hexf文件名和csv文件名
+3）fix calibrate flag bug
+4）修复一些显示默认值的bug
+
+version: Phywirte V2.3.b
+SVN location:
+\Phywirte\SW\MainApplicationV2.3.b
+
+升级内容:
+1）增加英文显示
+2）晶振校准的结果写入的值由PPM改变为offset
+3）修复一些显示的bug
+4）修复无法显示很长文件名的bug
+
+version: Phywirte V2.3.c
+SVN location:
+\Phywirte\SW\MainApplicationV2.3.c
+
+升级内容:
+1）解决未校准下mac不会增加的bug
+
+version: Phywirte V2.4.a
+SVN location:
+\Phywirte\SW\MainApplicationV2.4.a
+
+升级内容:
+1）增加烧录BootLoader
+2）优化部分代码
+
+version: Phywirte V2.4.b
+SVN location:
+\Phywirte\SW\MainApplicationV2.4.b
+
+升级内容:
+1）修改指示灯的io pin
+2）修复面板mac地址显示的bug
+3）增加文件名为空的保护
+
+version: Phywirte V2.4.c
+1）增加FCT mode烧写（针对6212芯片）
+2）修改部分函数原型的名称，兼容6212和6202
+3）增加串口数据sub解析
+4）修改烧写逻辑，由最先的先初始化到最先的先擦除
+5）增加4*3路信号，MANU OK、FAIL和BUSY
+6）增加FCT mode的界面显示
+7）解决一些已知的bug
+
+version: Phywirte V2.4.d
+1）增加0x1107d000地址写crc32校验值，调节crc32过程与工具WINRAR兼容
+2）调节cpbin命令中address的值(flah addr&0xffffff)
+
+version: Phywirte V2.4.e
+1）在烧录器屏幕过程中同步增加上位机log显示
+2）增加烧写MAC地址过程中MAC地址显示功能
+3）PhyWriter中增加‘start’按钮替代烧录器key功能
+4）增加rf测试结果dtm值返回到上位机log栏
+
+version: Phywirte BootLoaderV2
+SVN location:
+\Phywirte\SW\BootloaderV2
+
+升级内容：
+1）增加FCT mode的参数设置，修改断电情况下，mac地址的高位byte5值清零的bug
+
+version: Phywirte V2.5.a
+1）支持外挂flash的烧写（针对6202芯片）
+2）PhyWriter软件修改，增加External file（.bin文件）和Address（offset地址）
+3）同时支持片内和片外flash的烧写及相应的波特率提速烧录
+4）修改增加外部程序后的import、export setting功能
+5）增加EXT的面板显示
+6) 优化部分代码
+
+version: Phywirte V2.5.b
+SVN location:
+\Phywirte\SW\MainApplicationV2.5.b
+1）修正FCT模式bug
+2）增加烧写MAC地址过程中MAC地址显示功能
+3）修正PhyWriter上位机中csv文件中关于MAC地址的大小端解析bug
+4）修正GUI AAA display bug,防止误擦除spi config配置，故增加crc32上位机与下位机校验
+
+version: Phywirte V2.5.d
+SVN location:
+\Phywirte\SW\MainApplicationV2.5.b
+1）通过SD卡替代PhyWriter上位机配置（spiParam(.ini)\hexf\bin\csv）
+
+version: Phywirte BootLoaderV3
+SVN location:
+\Phywirte\SW\BootloaderV3
+
+升级内容：
+1）增加spiParam:dwc select的参数设置，兼容6252 TM=0的dwc连接进入烧写的模式选择
+2）增加spiParam:binSplit参数设置，支持8k拆分烧写（解决普冉flash写速度慢，高速烧写失败的问题）
+3）增加应用固件spiParam:hexSha256参数，写入sha256值到指定的address
+4）增加spiParam:hexCrc32,hexSha256写入地址，用户可配，写入外接DUT的地址，作为固件更新的check方式；
+5）增加eepParam：adcMode，对系列产品烧写前做adc值的校验
+
+version: Phywirte V2.5.e
+SVN location:
+\Phywirte\SW\MainApplicationV2.5.e
+1）支持PHY6252系列产品的烧写 （2020/8/26）
+2）兼容PHY6202/6212/6252不同波特率的烧写（2020/9/7）
+3）更新RF测试中收发包方式，优化烧写速率（2020/9/17）
+
+version: Phywirte V2.5.f
+SVN location:
+\Phywirte\SW\MainApplicationV2.5.f
+1）支持应用固件（hexf）的checksum(0x1100400c--4byte) and sha256(0x11004010--32byte) check （2020/10/20）
+2）将PhyWriter上位机和下位机版本号统一对应，并支持应用固件crc checksum和sha256写入地址可配（2020/10/21）
+3）修改crc32 checksum的算法，默认之前的（2020/10/22）
+4）fix hexCRC32 500bps写入错误（2020/10/27）
+5）增加ADC check test（2020/10/29/9：55）
+6）增加ADC check 上位机可选状态，烧录器的UI对应修改并显示ADC校验状态是否打开（2020/10/29/13：17）
+7）默认ADC状态打开（2020/10/29/13：54）
+8）fix 单线模式下ADC 校验数据处理问题，并增加flash write polling interval(2020/10/29/20:12)
+
+version: Phywirte V2.6.0
+SVN location:
+\Phywirte\SW\MainApplicationV2.6.0
+1)和V2.5.f最新版本的内容一致，为了区别单独出的一版
+2）MainApplication.hex文件为DUT设备断电时间延长1s，上电时间延长1s，为了含大电容的DUT设备能充分放电和上电；MainApplication_original.hex为未修改断电时间和上电时间的原始版程序
+
+version: Phywirte V2.6.1
+SVN location:
+\Phywirte\SW\MainApplicationV2.6.1
+1)PhyWriter增加csv文件中地址后的标志位为K的efuse数据的flash存储
+2)MainApplication中增加烧录csv文件过程识别efuse只写不读过程
+4)PhyWriter增加双引号与制表符过滤，使得phypluskit生成的efuse文件能直接通过PhyWriter导入
+
+version: Phywirte V2.6.2
+SVN location:
+\Phywirte\SW\MainApplicationV2.6.2
+1)PhyWriter增加efuse文件单独烧录的路径，efuse文件与配置文件互不兼容
+2)MainApplication中csv文件处理过程还原成增加efuse烧写之前的版本，单独增加烧录efuse文件（key文件）的过程
+3)PhyWriter增加efuse数据长度限制
+4)增加csv文件只有一行时重复使用功能
+5）修正烧录器屏幕显示校准过程的字号bug
+
+version: Phywirte V2.6.3
+SVN location:
+\Phywirte\SW\MainApplicationV2.6.3
+1)MainApplication增加通过PhyWriter上位机设置的mac地址在烧录完成后在烧录器显示屏显示
+2)MainApplication增加通过PhyWriter上位机的CSV导入的地址为4000的mac地址在烧录完成后在烧录器显示屏显示
+
+version: Phywirte V2.6.4
+SVN location:
+\Phywirte\SW\MainApplicationV2.6.4
+1)修改了V2.6.3中的csv文件烧录，通道1失败，通道2成功，程序认为成功，继续往下循环的bug（增加eep初始化）
+2)增加6252 收集golden侧数据的rf测试
+3）增加uartrun逻辑
+
+version: Phywirte toLUNCI_V2.6.4
+SVN location:
+\Phywirte\SW\MainApplicationV2.6.4
+1)内容同v2.6.4版本的程序，包含rf test和uartrun
+
+version: Phywirte toLUNCI_V2.6.4-on sit debug file现场调试版本
+SVN location:
+\Phywirte\SW\MainApplicationV2.6.4
+1)rf test 通过的包的阈值由90改为85
+2)dwc连接时，断电延时和上电延时都变为1s
+3）屏幕上添加了包的个数以及rssi值的显示顺序是channel1的包个数和rssi的值，channel3的包个数和rssi的值，用|分割.下边那一行分别对应2.4channel的
+4）在1.3channel做完rf测试后，2.4channel开始rf测试前增加500ms延时
+
+version: Phywirte V2.6.5
+SVN location:
+\Phywirte\SW\MainApplicationV2.6.5
+1)PHY6252/PHY6222 external write(bin)
+2)PHY6222 external flash write
+
+version: Phywirte V2.6.6
+SVN location:
+\Phywirte\SW\MainApplicationV2.6.6
+1)增加pb1引脚的adc采样值来判断芯片的好坏
+2)led.h文件中的DUT4_MANU_BUSY_PORT由pb1更改为pc6
+
+version: Phywirte V2.6.7
+SVN location:
+\Phywirte\SW\MainApplicationV2.6.7
+1)把macAddrOverFlag位置由eep改到writerSt
+2)改变efuse的执行过程
+3)增加固件版本校验以及sector erase重复写csv文件第一行的功能
+4)修复设置总剩余次数后升级固件结束，再次点击download setting总剩余次数不更新问题
+5)跳过adc pb1测试
+
+version: Phywirte V2.6.7_lunci
+包含adc pb1测试，adc采样阈值改为2.55-2.9v
+
+version: Phywirte V2.6.8_lunci（测试版本）
+1)更改了dut设备的上电逻辑
+2)对于mac全零情况，增加持续读写死循环，eep init，增加写mac过程中出现全零报错
+3)更改pb1测试方法：为A3芯片，且PE13需要拉高才会进行PB1测试流程（故6222芯片为A3芯片但可采取PE13引脚不拉高），电阻减小到10欧姆，改为测试开始发送命令之前采集一次电压，发送rf命令之后采集一次电压，两次电压差值大于50mv
+4)增加烧录hexf文件过程中的电压采集，小于2.95v自动重新烧写一次，没有信号状态输出，仍然小于，报写flash错误，参数2，信号状态输出失败
+5)在连接之后增加写寄存器打开bp过程，在程序最后打开写disable
+
+version: Phywirte V2.6.9
+1)去除伦茨代码中烧写hexf电压监控和adc采样程序
+2)去除打开BP和最后写disable
+
+version: Phywirte V2.6.9_lunci
+1)去除打开BP和最后写disable
+2)add checkAll test
+
+version: Phywirte V2.6.a_lunci
+1)增加hexf擦除方式
+
+version: Phywirte V2.7.0
+1)之前的4个通道的BUSY/OK/FAIL状态显示调用的float口在v1.4的烧录器板子中作为了四个通道的adc采样用，故换掉了4个通道的状态信号输出口
+2)不含烧写hexf过程中的adc电压采样以及BP1引脚的adc测试
+
+version: Phywirte V2.7.1
+1）支持3M以上bin文件烧写
+2）spiParam中spiIndex由128换成512，故spiParam由0x1000大小换成0x3000大小
+
+version: Phywirte V2.7.2
+1）擦除命令前添加flash unlock指令与clear registers of efuse clk&data
+2）擦除之后添加efuse校验过程，上位机efuse verify（16进制数：bit0，1，2，3 represent  block0，1，2，3 respectively）不为0时，则去校验efuse block情况
+
+version: Phywirte V2.6.D_LUNCI
+1）增加频偏校准功能
+
+version: Phywirte V2.6.D1_LUNCI
+1）烧录器flash中hexf数据crc32校验
+2）烧录器flashID显示与烧写（屏上，pc端，11004100位置）
+3）流程结束write disable
+
+version: Phywirte V2.6.E_LUNCI
+1）擦除命令前添加清除efuse时钟与数据指令
+2）在烧写efuse开始位置增加efuse时钟初始化
+3）增加休眠情况下漏电流测试DCL测试
+
+version: Phywirte V2.7.3
+1）写key之前添加efuse时钟使能
+2）添加了命令行模式
