@@ -1,37 +1,36 @@
 # skipping_rope_phy6222
 
-#### 介绍
-基于phy开发的跳绳项目
+## 1. 概述
+    该项目需开发一智能跳绳设备，设备上有4个按键进行操作输入，1个段码屏完成数据显示，显示内容分别为：蓝牙连接状态、运动模式、电池电量显示、跳绳个数和跳绳时间；设备通过锂电池供电，带USB充电功能；设备通过霍尔传感器捕获跳绳动作。
 
-#### 软件架构
-软件架构说明
+    设备设置三个运动模式:
+    a.自由跳模式
+        该模式下，只通过已跳绳个数；
+    b.计时跳模式
+        用户设定一定的时间值，以倒计时的值完成一组运动；
+    c.计数跳模式
+        用户设定一定的运动目标值，以到达该值为一组运动；
+
+    具体的软件设计逻辑以设计需求书为准，细节可以和客户共同协商对开发需求书动态变更。
+
+    上位机使用涂鸦平台开发，设备需要运行涂鸦的API完成与涂鸦APP进行BLE数据交互和OTA等功能。
+
+## 2. 硬件设计需求
+    a. 主控IC为phy6222  √                     
+    b. 4个按键                              √
+        电源键 / 设定键 / up键 / down键
+    c. 4 x 16段码屏                         √
+        段码屏驱动IC VK1088 (客户指定)      √
+	    段码屏定制
+        段码屏背光      √
+    d. USB充电检测      √
+    e. 电池电量估算     √
+    f. 锂电池供电       √
+    g. 2个霍尔传感器    √
+        SV229A(客户指定)
+    h. isr烧录          √
+    i. 1个蜂鸣器        √
+
+    
 
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
