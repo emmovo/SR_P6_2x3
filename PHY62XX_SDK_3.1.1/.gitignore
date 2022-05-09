@@ -4,16 +4,14 @@
 *.out
 *.dep
 *.i
-*.hex*
+
 *.htm
 *.crf
 *.iex
 *.csv
 *.dep
 *.lst
-*.map
-*.uvguix*
-*.uvoptx
+
 *.bin
 JLinkLog.txt
 JlinkSettings.ini
@@ -30,7 +28,7 @@ buildlog_*.txt
 ER_IROM*
 JUMP_TABLE
 RTE_Components.h
-*.lib
+
 !/components/ethermind/lib/meshlibs/phyos/keil/*.lib
 
 # ignor folder
