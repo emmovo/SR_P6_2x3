@@ -1,3 +1,13 @@
+<!--
+ * @Author: emmovo
+ * @Date: 2022-05-03 08:51:54
+ * @LastEditors: emmovo
+ * @LastEditTime: 2022-05-25 14:25:35
+ * @FilePath: \skippingRope_phy6222\README.md
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by mingjkl@live.com/emmovo.com, All Rights Reserved. 
+-->
 # skipping_rope_phy6222
 
 ## 1. 概述
@@ -91,8 +101,5 @@
 - Timer驱动程序移植
 - 运动逻辑代码移植
 
-
-
-    
 
 
