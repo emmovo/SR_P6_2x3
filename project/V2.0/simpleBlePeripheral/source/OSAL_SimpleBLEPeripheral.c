@@ -78,9 +78,61 @@
 /* Application */
 #include "simpleBLEPeripheral.h"
 
+#include "board.h"
+#include "clock.h"
+
 /*********************************************************************
     GLOBAL VARIABLES
 */
+
+
+uint8_t test_TaskID;
+
+uint16 test_task(uint8 task_id, uint16 events)
+{
+		hal_gpio_write(GPIO_P31, 0);
+		hal_gpio_write(GPIO_P32, 0);
+		hal_gpio_write(GPIO_P33, 1);
+		WaitMs(300);
+		hal_gpio_write(GPIO_P31, 0);
+		hal_gpio_write(GPIO_P32, 1);
+		hal_gpio_write(GPIO_P33, 0);
+		WaitMs(300);
+		hal_gpio_write(GPIO_P31, 0);
+		hal_gpio_write(GPIO_P32, 1);
+		hal_gpio_write(GPIO_P33, 1);
+		WaitMs(300);
+		hal_gpio_write(GPIO_P31, 1);
+		hal_gpio_write(GPIO_P32, 0);
+		hal_gpio_write(GPIO_P33, 0);
+		WaitMs(300);
+		hal_gpio_write(GPIO_P31, 1);
+		hal_gpio_write(GPIO_P32, 0);
+		hal_gpio_write(GPIO_P33, 1);
+		WaitMs(300);
+		hal_gpio_write(GPIO_P31, 1);
+		hal_gpio_write(GPIO_P32, 1);
+		hal_gpio_write(GPIO_P33, 0);
+		WaitMs(300);
+		hal_gpio_write(GPIO_P31, 1);
+		hal_gpio_write(GPIO_P32, 1);
+		hal_gpio_write(GPIO_P33, 1);
+		WaitMs(300);
+		hal_gpio_write(GPIO_P31, 0);
+		hal_gpio_write(GPIO_P32, 0);
+		hal_gpio_write(GPIO_P33, 0);
+		WaitMs(300);
+	
+	
+	
+		return 1;
+}
+
+void test_init(uint8 task_id)
+{
+		osal_set_event(task_id, 1);
+
+}
 
 // The order in this table must be identical to the task initialization calls below in osalInitTask.
 const pTaskEventHandlerFn tasksArr[] =
@@ -101,6 +153,7 @@ const pTaskEventHandlerFn tasksArr[] =
     GATTServApp_ProcessEvent,                                         // task 7
     SimpleBLEPeripheral_ProcessEvent,                                 // task 8
     phy_timer_ProcessEvent,                                           // task 9
+		test_task,
 
 };
 
@@ -152,6 +205,9 @@ void osalInitTasks( void )
     SimpleBLEPeripheral_Init( taskID++ );
     /* Timer */
     phy_timer_init( taskID++ );
+		
+		test_init(taskID++);
+		
 }
 #endif
 /*********************************************************************

@@ -22,16 +22,19 @@ Dialog DLL:      TARMCM1.DLL V1.9.0.0
  
 <h2>Project:</h2>
 D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral\simpleBlePeripheral.uvprojx
-Project File Date:  05/20/2022
+Project File Date:  05/26/2022
 
 <h2>Output:</h2>
 Build target 'Target 1'
+compiling OSAL_SimpleBLEPeripheral.c...
+linking...
+Program Size: Code=95060 RO-data=13988 RW-data=3200 ZI-data=24720  
+FromELF: creating hex file...
 After Build - User command #1: fromelf.exe .\Objects\simpleBlePeripheral.axf --i32combined --output .\bin\simpleBlePeripheral.hex
-*** Error: CreateProcess failed, Command: 'fromelf.exe .\Objects\simpleBlePeripheral.axf --i32combined --output .\bin\simpleBlePeripheral.hex'
 After Build - User command #2: .\bin\material\mk_hexf_bin.bat
 D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral>.\bin\material\PhyPlusKit_v2.5.2a.exe -c -p .\bin\simpleBlePeripheral.hex -b ..\..\OTA\slboot\bin\slboot.hex -m SN -v 6222 
 D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral>python .\bin\material\ooo_bin.py .\bin\simpleBlePeripheral_phy6222.hex16 
-".\Objects\simpleBlePeripheral.axf" - 1 Error(s), 0 Warning(s).
+".\Objects\simpleBlePeripheral.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -56,7 +59,6 @@ Package Vendor: ARM
       Source file:   Device\ARM\ARMCM0\Source\system_ARMCM0.c
 
    * Component: ARM::CMSIS:CORE:5.3.0
-Target not created.
 </pre>
 </body>
 </html>

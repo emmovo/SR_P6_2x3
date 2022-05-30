@@ -52,6 +52,11 @@
 #include "osal_snv.h"
 //#include "OnBoard.h"
 
+#include "board.h"
+
+#include "gpio.h"
+#include "clock.h"
+
 
 /**************************************************************************************************
     FUNCTIONS
@@ -70,11 +75,33 @@
 */
 int app_main(void)
 {
+
     /* Initialize the operating system */
     osal_init_system();
-    osal_pwrmgr_device( PWRMGR_BATTERY );
+
+	  osal_pwrmgr_device( PWRMGR_BATTERY );
+	
+		hal_gpio_pin_init(GPIO_P31, GPIO_OUTPUT);
+		hal_gpio_pin_init(GPIO_P32, GPIO_OUTPUT);
+		hal_gpio_pin_init(GPIO_P33, GPIO_OUTPUT);
+	
+		hal_gpio_write(GPIO_P31, true);
+		hal_gpio_write(GPIO_P32, false);
+		hal_gpio_write(GPIO_P33, true);
+	
+		for(uint8_t i = 0; i < 5; i++)
+		{
+			hal_gpio_write(GPIO_P32, false);
+			WaitMs(200);
+			hal_gpio_write(GPIO_P32, true);
+			WaitMs(200);
+		}
+	
+
+
     /* Start OSAL */
     osal_start_system(); // No Return from here
+		
     return 0;
 }
 #endif

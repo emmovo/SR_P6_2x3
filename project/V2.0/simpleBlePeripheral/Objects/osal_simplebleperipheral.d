@@ -43,3 +43,14 @@
 .\objects\osal_simplebleperipheral.o: ..\..\..\PHY62XX_SDK_3.1.1\components\ble\host\gattservapp.h
 .\objects\osal_simplebleperipheral.o: ..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\Roles\peripheral.h
 .\objects\osal_simplebleperipheral.o: source\simpleBLEPeripheral.h
+.\objects\osal_simplebleperipheral.o: ..\tuya_ble_sdk_demo\board\board.h
+.\objects\osal_simplebleperipheral.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\osal_simplebleperipheral.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\osal_simplebleperipheral.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\osal_simplebleperipheral.o: ..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_type.h
+.\objects\osal_simplebleperipheral.o: ..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_stdlib.h
+.\objects\osal_simplebleperipheral.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\osal_simplebleperipheral.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\osal_simplebleperipheral.o: ..\tuya_ble_sdk_demo\components\external\easylogger\inc\elog.h
+.\objects\osal_simplebleperipheral.o: ..\tuya_ble_sdk_demo\components\external\easylogger\inc\elog_cfg.h
+.\objects\osal_simplebleperipheral.o: ..\..\..\PHY62XX_SDK_3.1.1\components\driver\clock\clock.h

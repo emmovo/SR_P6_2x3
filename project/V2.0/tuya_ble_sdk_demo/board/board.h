@@ -35,7 +35,7 @@ extern "C"
 /*********************************************************************
  * CONSTANT
  */
-#define TY_LOG_ENABLE                           0 //TUYA_APP_LOG_ENABLE
+#define TY_LOG_ENABLE                           1 //TUYA_APP_LOG_ENABLE
 #if (TY_LOG_ENABLE)
     #define TY_PRINTF(...)                      log_d(__VA_ARGS__)
     #define TY_HEXDUMP_0(...)                   elog_hexdump("", 8, __VA_ARGS__)
