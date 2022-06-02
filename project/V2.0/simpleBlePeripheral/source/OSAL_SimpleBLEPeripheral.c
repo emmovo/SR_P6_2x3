@@ -153,7 +153,7 @@ const pTaskEventHandlerFn tasksArr[] =
     GATTServApp_ProcessEvent,                                         // task 7
     SimpleBLEPeripheral_ProcessEvent,                                 // task 8
     phy_timer_ProcessEvent,                                           // task 9
-		test_task,
+//		test_task,
 
 };
 
@@ -206,7 +206,7 @@ void osalInitTasks( void )
     /* Timer */
     phy_timer_init( taskID++ );
 		
-		test_init(taskID++);
+//		test_init(taskID++);
 		
 }
 #endif

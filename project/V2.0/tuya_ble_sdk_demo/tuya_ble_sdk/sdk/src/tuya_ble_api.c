@@ -1593,7 +1593,8 @@ tuya_ble_status_t tuya_ble_sdk_init(tuya_ble_device_param_t * param_data)
 		tuya_ble_current_para.adv_local_name_len = 2;
 	}
 	
-#if (!TUYA_BLE_DEVICE_AUTH_DATA_STORE)
+//#if (!TUYA_BLE_DEVICE_AUTH_DATA_STORE)
+#if (1)
     if(param_data->device_id_len == 20)
     {
         TUYA_BLE_LOG_HEXDUMP_DEBUG("device_id_20 ",param_data->device_id, 20);

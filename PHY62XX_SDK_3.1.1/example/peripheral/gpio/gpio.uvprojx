@@ -147,7 +147,7 @@
             <RestoreSysVw>1</RestoreSysVw>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>1</TargetSelection>
+          <TargetSelection>6</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -160,8 +160,8 @@
             <CpuDllArguments></CpuDllArguments>
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-            <Driver>BIN\UL2CM3.DLL</Driver>
+            <InitializationFile>.\ram.ini</InitializationFile>
+            <Driver>Segger\JL2CM3.dll</Driver>
           </TargetDlls>
         </DebugOption>
         <Utilities>
@@ -363,7 +363,7 @@
             <useXO>0</useXO>
             <VariousControls>
               <MiscControls>-DADV_NCONN_CFG=0x01   -DADV_CONN_CFG=0x02   -DSCAN_CFG=0x04    -DINIT_CFG=0x08   -DBROADCASTER_CFG=0x01 -DOBSERVER_CFG=0x02   -DPERIPHERAL_CFG=0x04   -DCENTRAL_CFG=0x08   -DHOST_CONFIG=0x4  </MiscControls>
-              <Define>CFG_CP   CFG_SLEEP_MODE=PWR_MODE_SLEEP DEBUG_INFO=1 PHY_MCU_TYPE=MCU_BUMBEE_M0</Define>
+              <Define>CFG_CP   CFG_SLEEP_MODE=PWR_MODE_NO_SLEEP DEBUG_INFO=1 PHY_MCU_TYPE=MCU_BUMBEE_M0</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\..\components\inc;..\..\..\components\osal\include;..\..\..\components\ble\include;..\..\..\components\ble\hci;..\..\..\components\ble\host;..\..\..\components\profiles\DevInfo;..\..\..\components\profiles\GATT;..\..\..\components\profiles\SimpleProfile;..\..\..\components\profiles\Roles;..\..\..\components\profiles\hrs;..\..\..\components\driver\common;..\..\..\components\driver\log;..\..\..\components\driver\gpio;..\..\..\components\driver\pwrmgr;..\..\..\components\driver\uart;..\..\..\components\driver\adc;..\..\..\components\driver\clock;..\..\..\components\driver\spi;..\..\..\components\driver\key;..\..\..\components\driver\i2c;..\..\..\components\driver\watchdog;..\..\..\components\driver\timer;..\..\..\components\driver\kscan;..\..\..\lib;.\Source;..\..\..\components\arch\cm0;..\..\..\components\ble\controller;..\..\..\misc;..\..\..\components\driver\flash</IncludePath>
             </VariousControls>

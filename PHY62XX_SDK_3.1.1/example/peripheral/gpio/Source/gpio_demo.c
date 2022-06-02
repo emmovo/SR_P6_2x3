@@ -313,6 +313,7 @@ void Key_Demo_Init(uint8 task_id)
         3.idle level,config key_state.idle_level
         4.key type,if only use press and release,ignore the long press and release code
         5.taskID and callback function
+
     */
 //  key_state.key[0].pin = GPIO_P14;//default gpio
 //  key_state.key[1].pin = GPIO_P15;

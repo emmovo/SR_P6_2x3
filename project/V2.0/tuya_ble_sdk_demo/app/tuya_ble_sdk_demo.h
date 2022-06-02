@@ -31,15 +31,25 @@ extern "C"
  */
 //PID - product id, DID - device id
 //FIR - firmware, FVER - firmware version, HVER - hardware version
-#define TY_DEVICE_NAME        "your"
-#define TY_DEVICE_PID         "2ewvra2e" //"suq5jmo5"(nRF52832) "p7ncbdgh"(watch) "2ewvra2e"(PHY6222)
+#define TY_DEVICE_NAME        "TY"
+	
+//#define TY_DEVICE_PID         "2ewvra2e" //"suq5jmo5"(nRF52832) "p7ncbdgh"(watch) "2ewvra2e"(PHY6222)
+	
+#define TY_DEVICE_PID         "uficjten"
+
 #define TY_DEVICE_MAC         "DC234D12ED2E"
 #define TY_DEVICE_DID         "tuyaf3752699e2cd" //16Bytes
 #define TY_DEVICE_AUTH_KEY    "4gBM3DK6SRmRn9LTLbyOUAz3bHMGCfMW" //32Bytes
 
-#define TY_DEVICE_FIR_NAME    "tuya_ble_sdk_demo_PHY6222"
-#define TY_DEVICE_FVER_NUM    0x00000201
-#define TY_DEVICE_FVER_STR    "2.1"
+//#define TY_DEVICE_FIR_NAME    "tuya_ble_sdk_demo_PHY6222"
+//#define TY_DEVICE_FVER_NUM    0x00000201
+//#define TY_DEVICE_FVER_STR    "2.1"
+//#define TY_DEVICE_HVER_NUM    0x00000100
+//#define TY_DEVICE_HVER_STR    "1.0"
+
+#define TY_DEVICE_FIR_NAME    "SmartRope"
+#define TY_DEVICE_FVER_NUM    0x0308
+#define TY_DEVICE_FVER_STR    "3.8"
 #define TY_DEVICE_HVER_NUM    0x00000100
 #define TY_DEVICE_HVER_STR    "1.0"
 

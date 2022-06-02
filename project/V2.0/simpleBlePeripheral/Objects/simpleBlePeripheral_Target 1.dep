@@ -1,6 +1,6 @@
 Dependencies for Project 'simpleBlePeripheral', Target 'Target 1': (DO NOT MODIFY !)
 F (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.c)(0x612C9862)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I..\..\..\PHY62XX_SDK_3.1.1\components\inc -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\controller -I..\..\..\PHY62XX_SDK_3.1.1\components\osal\include -I..\..\..\PHY62XX_SDK_3.1.1\components\common -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\include -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\hci -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\host -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\ota_app -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\DevInfo -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\SimpleProfile -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\Roles -I.\source -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\crc16 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\clock -I..\..\..\PHY62XX_SDK_3.1.1\components\arch\cm0 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwrmgr -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\uart -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\gpio -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\timer -I..\..\..\PHY62XX_SDK_3.1.1\misc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\log -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\cliface -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\key -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwm -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\adc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\spi -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\i2c -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\flash -I..\tuya_ble_sdk_demo\app -I..\tuya_ble_sdk_demo\board -I..\tuya_ble_sdk_demo\board\include -I..\tuya_ble_sdk_demo\board\phy62xx\ota -I..\tuya_ble_sdk_demo\board\phy62xx\service -I..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port -I..\tuya_ble_sdk_demo\components\ty_util -I..\tuya_ble_sdk_demo\components\ty_oled -I..\tuya_ble_sdk_demo\components\ty_key_press -I..\tuya_ble_sdk_demo\components\external\easylogger\inc -I..\tuya_ble_sdk_demo\tuya_ble_sdk -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\product_test -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\uart_common -I..\tuya_ble_sdk_demo\tuya_ble_sdk\extern_components\mbedtls -I..\tuya_ble_sdk_demo\tuya_ble_sdk\port -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\fs -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib --diag_suppress=177,550,186,545,188,68,940 -DADV_NCONN_CFG=0x01  -DADV_CONN_CFG=0x02  -DSCAN_CFG=0x04   -DINIT_CFG=0x08   -DBROADCASTER_CFG=0x01 -DOBSERVER_CFG=0x02  -DPERIPHERAL_CFG=0x04  -DCENTRAL_CFG=0x08 -I D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="514" -D_RTE_ -DARMCM0 -DCFG_SRAM_RETENTION_LOW_CURRENT_LDO_ENABLE -DCUSTOMIZED_TUYA_BLE_CONFIG_FILE="<custom_tuya_ble_config.h>" -DCFG_CP -DDEBUG_INFO="1" -DMTU_SIZE="247" -DHOST_CONFIG="4" -DHCI_TL_NONE="1" -DENABLE_LOG_ROM_="0" -D_BUILD_FOR_DTM_="0" -DDEBUG_INFO="1" -DDBG_ROM_MAIN="0" -DAPP_CFG="0" -DOSALMEM_METRICS="0" -DPHY_MCU_TYPE="MCU_BUMBEE_M0" -DCFG_SLEEP_MODE="PWR_MODE_NO_SLEEP" -DDEF_GAPBOND_MGR_ENABLE="0" -DUSE_FS="0" -DMAX_NUM_LL_CONN="1"-o .\objects\tuya_ble_sdk_demo.o --omf_browse .\objects\tuya_ble_sdk_demo.crf --depend .\objects\tuya_ble_sdk_demo.d)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (..\tuya_ble_sdk_demo\board\phy62xx\ota\tuya_ble_ota.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_type.h)(0x612C9862)
@@ -20,7 +20,7 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_mem.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -72,8 +72,8 @@ I (..\tuya_ble_sdk_demo\board\include\ty_spi.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\components\ty_oled\ty_oled.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\include\ty_system.h)(0x612C9862)
@@ -117,8 +117,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_mem.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -166,8 +166,8 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -191,7 +191,7 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\Device\ARM\ARMCM0\Include\system_ARMCM0.h
 I (..\..\..\PHY62XX_SDK_3.1.1\components\inc\mcu_phy_bumbee.h)(0x61446C96)
 I (..\..\..\PHY62XX_SDK_3.1.1\components\inc\error.h)(0x61446C96)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_utils.h)(0x612C9862)
-F (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\src\tuya_ble_api.c)(0x612C9862)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I..\..\..\PHY62XX_SDK_3.1.1\components\inc -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\controller -I..\..\..\PHY62XX_SDK_3.1.1\components\osal\include -I..\..\..\PHY62XX_SDK_3.1.1\components\common -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\include -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\hci -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\host -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\ota_app -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\DevInfo -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\SimpleProfile -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\Roles -I.\source -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\crc16 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\clock -I..\..\..\PHY62XX_SDK_3.1.1\components\arch\cm0 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwrmgr -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\uart -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\gpio -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\timer -I..\..\..\PHY62XX_SDK_3.1.1\misc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\log -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\cliface -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\key -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwm -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\adc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\spi -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\i2c -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\flash -I..\tuya_ble_sdk_demo\app -I..\tuya_ble_sdk_demo\board -I..\tuya_ble_sdk_demo\board\include -I..\tuya_ble_sdk_demo\board\phy62xx\ota -I..\tuya_ble_sdk_demo\board\phy62xx\service -I..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port -I..\tuya_ble_sdk_demo\components\ty_util -I..\tuya_ble_sdk_demo\components\ty_oled -I..\tuya_ble_sdk_demo\components\ty_key_press -I..\tuya_ble_sdk_demo\components\external\easylogger\inc -I..\tuya_ble_sdk_demo\tuya_ble_sdk -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\product_test -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\uart_common -I..\tuya_ble_sdk_demo\tuya_ble_sdk\extern_components\mbedtls -I..\tuya_ble_sdk_demo\tuya_ble_sdk\port -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\fs -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib --diag_suppress=177,550,186,545,188,68,940 -DADV_NCONN_CFG=0x01  -DADV_CONN_CFG=0x02  -DSCAN_CFG=0x04   -DINIT_CFG=0x08   -DBROADCASTER_CFG=0x01 -DOBSERVER_CFG=0x02  -DPERIPHERAL_CFG=0x04  -DCENTRAL_CFG=0x08 -I D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="514" -D_RTE_ -DARMCM0 -DCFG_SRAM_RETENTION_LOW_CURRENT_LDO_ENABLE -DCUSTOMIZED_TUYA_BLE_CONFIG_FILE="<custom_tuya_ble_config.h>" -DCFG_CP -DDEBUG_INFO="1" -DMTU_SIZE="247" -DHOST_CONFIG="4" -DHCI_TL_NONE="1" -DENABLE_LOG_ROM_="0" -D_BUILD_FOR_DTM_="0" -DDEBUG_INFO="1" -DDBG_ROM_MAIN="0" -DAPP_CFG="0" -DOSALMEM_METRICS="0" -DPHY_MCU_TYPE="MCU_BUMBEE_M0" -DCFG_SLEEP_MODE="PWR_MODE_NO_SLEEP" -DDEF_GAPBOND_MGR_ENABLE="0" -DUSE_FS="0" -DMAX_NUM_LL_CONN="1"-o .\objects\tuya_ble_api.o --omf_browse .\objects\tuya_ble_api.crf --depend .\objects\tuya_ble_api.d)
+F (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\src\tuya_ble_api.c)(0x62986CD1)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I..\..\..\PHY62XX_SDK_3.1.1\components\inc -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\controller -I..\..\..\PHY62XX_SDK_3.1.1\components\osal\include -I..\..\..\PHY62XX_SDK_3.1.1\components\common -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\include -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\hci -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\host -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\ota_app -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\DevInfo -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\SimpleProfile -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\Roles -I.\source -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\crc16 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\clock -I..\..\..\PHY62XX_SDK_3.1.1\components\arch\cm0 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwrmgr -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\uart -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\gpio -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\timer -I..\..\..\PHY62XX_SDK_3.1.1\misc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\log -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\cliface -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\key -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwm -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\adc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\spi -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\i2c -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\flash -I..\tuya_ble_sdk_demo\app -I..\tuya_ble_sdk_demo\board -I..\tuya_ble_sdk_demo\board\include -I..\tuya_ble_sdk_demo\board\phy62xx\ota -I..\tuya_ble_sdk_demo\board\phy62xx\service -I..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port -I..\tuya_ble_sdk_demo\components\ty_util -I..\tuya_ble_sdk_demo\components\ty_oled -I..\tuya_ble_sdk_demo\components\ty_key_press -I..\tuya_ble_sdk_demo\components\external\easylogger\inc -I..\tuya_ble_sdk_demo\tuya_ble_sdk -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\product_test -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\uart_common -I..\tuya_ble_sdk_demo\tuya_ble_sdk\extern_components\mbedtls -I..\tuya_ble_sdk_demo\tuya_ble_sdk\port -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\fs -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib --diag_suppress=177,550,186,545,188,68,940 -DADV_NCONN_CFG=0x01  -DADV_CONN_CFG=0x02  -DSCAN_CFG=0x04   -DINIT_CFG=0x08   -DBROADCASTER_CFG=0x01 -DOBSERVER_CFG=0x02  -DPERIPHERAL_CFG=0x04  -DCENTRAL_CFG=0x08 -I D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="514" -D_RTE_ -DARMCM0 -DCFG_SRAM_RETENTION_LOW_CURRENT_LDO_ENABLE -DCUSTOMIZED_TUYA_BLE_CONFIG_FILE="<custom_tuya_ble_config.h>" -DCFG_CP -DDEBUG_INFO="1" -DMTU_SIZE="247" -DHOST_CONFIG="4" -DHCI_TL_NONE="1" -DENABLE_LOG_ROM_="0" -D_BUILD_FOR_DTM_="0" -DDEBUG_INFO="1" -DDBG_ROM_MAIN="0" -DAPP_CFG="0" -DOSALMEM_METRICS="0" -DPHY_MCU_TYPE="MCU_BUMBEE_M0" -DCFG_SLEEP_MODE="PWR_MODE_NO_SLEEP" -DDEF_GAPBOND_MGR_ENABLE="0" -DUSE_FS="0" -DMAX_NUM_LL_CONN="1"-o .\objects\tuya_ble_api.o --omf_browse .\objects\tuya_ble_api.crf --depend .\objects\tuya_ble_api.d)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_stdlib.h)(0x612C9862)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5475F300)
@@ -203,8 +203,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_type.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -252,8 +252,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_utils.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_type.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\include\ty_system.h)(0x612C9862)
@@ -288,8 +288,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_heap.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_type.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\include\ty_system.h)(0x612C9862)
@@ -326,8 +326,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_mem.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -374,8 +374,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_heap.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_mem.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -412,8 +412,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_mem.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -467,8 +467,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_type.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -523,8 +523,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_mem.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -572,8 +572,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_mem.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -625,8 +625,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_mem.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -675,8 +675,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_mem.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -723,8 +723,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_gatt_send_queue.h)(0x6
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_type.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_queue.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -764,8 +764,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_type.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_mem.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_mutli_tsf_protocol.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 F (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\src\tuya_ble_event_handler_weak.c)(0x612C9862)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I..\..\..\PHY62XX_SDK_3.1.1\components\inc -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\controller -I..\..\..\PHY62XX_SDK_3.1.1\components\osal\include -I..\..\..\PHY62XX_SDK_3.1.1\components\common -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\include -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\hci -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\host -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\ota_app -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\DevInfo -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\SimpleProfile -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\Roles -I.\source -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\crc16 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\clock -I..\..\..\PHY62XX_SDK_3.1.1\components\arch\cm0 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwrmgr -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\uart -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\gpio -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\timer -I..\..\..\PHY62XX_SDK_3.1.1\misc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\log -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\cliface -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\key -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwm -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\adc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\spi -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\i2c -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\flash -I..\tuya_ble_sdk_demo\app -I..\tuya_ble_sdk_demo\board -I..\tuya_ble_sdk_demo\board\include -I..\tuya_ble_sdk_demo\board\phy62xx\ota -I..\tuya_ble_sdk_demo\board\phy62xx\service -I..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port -I..\tuya_ble_sdk_demo\components\ty_util -I..\tuya_ble_sdk_demo\components\ty_oled -I..\tuya_ble_sdk_demo\components\ty_key_press -I..\tuya_ble_sdk_demo\components\external\easylogger\inc -I..\tuya_ble_sdk_demo\tuya_ble_sdk -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\product_test -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\uart_common -I..\tuya_ble_sdk_demo\tuya_ble_sdk\extern_components\mbedtls -I..\tuya_ble_sdk_demo\tuya_ble_sdk\port -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\fs -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib --diag_suppress=177,550,186,545,188,68,940 -DADV_NCONN_CFG=0x01  -DADV_CONN_CFG=0x02  -DSCAN_CFG=0x04   -DINIT_CFG=0x08   -DBROADCASTER_CFG=0x01 -DOBSERVER_CFG=0x02  -DPERIPHERAL_CFG=0x04  -DCENTRAL_CFG=0x08 -I D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="514" -D_RTE_ -DARMCM0 -DCFG_SRAM_RETENTION_LOW_CURRENT_LDO_ENABLE -DCUSTOMIZED_TUYA_BLE_CONFIG_FILE="<custom_tuya_ble_config.h>" -DCFG_CP -DDEBUG_INFO="1" -DMTU_SIZE="247" -DHOST_CONFIG="4" -DHCI_TL_NONE="1" -DENABLE_LOG_ROM_="0" -D_BUILD_FOR_DTM_="0" -DDEBUG_INFO="1" -DDBG_ROM_MAIN="0" -DAPP_CFG="0" -DOSALMEM_METRICS="0" -DPHY_MCU_TYPE="MCU_BUMBEE_M0" -DCFG_SLEEP_MODE="PWR_MODE_NO_SLEEP" -DDEF_GAPBOND_MGR_ENABLE="0" -DUSE_FS="0" -DMAX_NUM_LL_CONN="1"-o .\objects\tuya_ble_event_handler_weak.o --omf_browse .\objects\tuya_ble_event_handler_weak.crf --depend .\objects\tuya_ble_event_handler_weak.d)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_stdlib.h)(0x612C9862)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
@@ -790,8 +790,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_mem.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -838,8 +838,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_mem.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -899,8 +899,8 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\board\include\ty_ble.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\board.h)(0x628EE0D6)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5475F2FE)
@@ -1063,8 +1063,8 @@ I (..\tuya_ble_sdk_demo\components\external\easylogger\inc\elog_cfg.h)(0x612C986
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -1131,8 +1131,8 @@ I (..\tuya_ble_sdk_demo\components\external\easylogger\inc\elog_cfg.h)(0x612C986
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -1397,8 +1397,8 @@ I (..\..\..\PHY62XX_SDK_3.1.1\components\driver\gpio\gpio.h)(0x61446C96)
 I (..\..\..\PHY62XX_SDK_3.1.1\components\inc\error.h)(0x61446C96)
 I (..\..\..\PHY62XX_SDK_3.1.1\components\inc\version.h)(0x61446C96)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 F (..\tuya_ble_sdk_demo\board\phy62xx\ty_board_phy62xx\ty_system_phy62xx.c)(0x612C9862)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I..\..\..\PHY62XX_SDK_3.1.1\components\inc -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\controller -I..\..\..\PHY62XX_SDK_3.1.1\components\osal\include -I..\..\..\PHY62XX_SDK_3.1.1\components\common -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\include -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\hci -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\host -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\ota_app -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\DevInfo -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\SimpleProfile -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\Roles -I.\source -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\crc16 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\clock -I..\..\..\PHY62XX_SDK_3.1.1\components\arch\cm0 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwrmgr -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\uart -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\gpio -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\timer -I..\..\..\PHY62XX_SDK_3.1.1\misc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\log -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\cliface -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\key -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwm -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\adc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\spi -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\i2c -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\flash -I..\tuya_ble_sdk_demo\app -I..\tuya_ble_sdk_demo\board -I..\tuya_ble_sdk_demo\board\include -I..\tuya_ble_sdk_demo\board\phy62xx\ota -I..\tuya_ble_sdk_demo\board\phy62xx\service -I..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port -I..\tuya_ble_sdk_demo\components\ty_util -I..\tuya_ble_sdk_demo\components\ty_oled -I..\tuya_ble_sdk_demo\components\ty_key_press -I..\tuya_ble_sdk_demo\components\external\easylogger\inc -I..\tuya_ble_sdk_demo\tuya_ble_sdk -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\product_test -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\uart_common -I..\tuya_ble_sdk_demo\tuya_ble_sdk\extern_components\mbedtls -I..\tuya_ble_sdk_demo\tuya_ble_sdk\port -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\fs -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib --diag_suppress=177,550,186,545,188,68,940 -DADV_NCONN_CFG=0x01  -DADV_CONN_CFG=0x02  -DSCAN_CFG=0x04   -DINIT_CFG=0x08   -DBROADCASTER_CFG=0x01 -DOBSERVER_CFG=0x02  -DPERIPHERAL_CFG=0x04  -DCENTRAL_CFG=0x08 -I D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="514" -D_RTE_ -DARMCM0 -DCFG_SRAM_RETENTION_LOW_CURRENT_LDO_ENABLE -DCUSTOMIZED_TUYA_BLE_CONFIG_FILE="<custom_tuya_ble_config.h>" -DCFG_CP -DDEBUG_INFO="1" -DMTU_SIZE="247" -DHOST_CONFIG="4" -DHCI_TL_NONE="1" -DENABLE_LOG_ROM_="0" -D_BUILD_FOR_DTM_="0" -DDEBUG_INFO="1" -DDBG_ROM_MAIN="0" -DAPP_CFG="0" -DOSALMEM_METRICS="0" -DPHY_MCU_TYPE="MCU_BUMBEE_M0" -DCFG_SLEEP_MODE="PWR_MODE_NO_SLEEP" -DDEF_GAPBOND_MGR_ENABLE="0" -DUSE_FS="0" -DMAX_NUM_LL_CONN="1"-o .\objects\ty_system_phy62xx.o --omf_browse .\objects\ty_system_phy62xx.crf --depend .\objects\ty_system_phy62xx.d)
 I (..\tuya_ble_sdk_demo\board\include\ty_system.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\board.h)(0x628EE0D6)
@@ -1426,8 +1426,8 @@ I (..\tuya_ble_sdk_demo\board\include\ty_spi.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -1475,8 +1475,8 @@ I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_log.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
@@ -1506,7 +1506,7 @@ I (..\tuya_ble_sdk_demo\board\include\ty_ble.h)(0x612C9862)
 F (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.c)(0x612C9862)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I..\..\..\PHY62XX_SDK_3.1.1\components\inc -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\controller -I..\..\..\PHY62XX_SDK_3.1.1\components\osal\include -I..\..\..\PHY62XX_SDK_3.1.1\components\common -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\include -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\hci -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\host -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\ota_app -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\DevInfo -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\SimpleProfile -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\Roles -I.\source -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\crc16 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\clock -I..\..\..\PHY62XX_SDK_3.1.1\components\arch\cm0 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwrmgr -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\uart -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\gpio -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\timer -I..\..\..\PHY62XX_SDK_3.1.1\misc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\log -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\cliface -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\key -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwm -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\adc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\spi -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\i2c -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\flash -I..\tuya_ble_sdk_demo\app -I..\tuya_ble_sdk_demo\board -I..\tuya_ble_sdk_demo\board\include -I..\tuya_ble_sdk_demo\board\phy62xx\ota -I..\tuya_ble_sdk_demo\board\phy62xx\service -I..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port -I..\tuya_ble_sdk_demo\components\ty_util -I..\tuya_ble_sdk_demo\components\ty_oled -I..\tuya_ble_sdk_demo\components\ty_key_press -I..\tuya_ble_sdk_demo\components\external\easylogger\inc -I..\tuya_ble_sdk_demo\tuya_ble_sdk -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\product_test -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\uart_common -I..\tuya_ble_sdk_demo\tuya_ble_sdk\extern_components\mbedtls -I..\tuya_ble_sdk_demo\tuya_ble_sdk\port -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\fs -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib --diag_suppress=177,550,186,545,188,68,940 -DADV_NCONN_CFG=0x01  -DADV_CONN_CFG=0x02  -DSCAN_CFG=0x04   -DINIT_CFG=0x08   -DBROADCASTER_CFG=0x01 -DOBSERVER_CFG=0x02  -DPERIPHERAL_CFG=0x04  -DCENTRAL_CFG=0x08 -I D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="514" -D_RTE_ -DARMCM0 -DCFG_SRAM_RETENTION_LOW_CURRENT_LDO_ENABLE -DCUSTOMIZED_TUYA_BLE_CONFIG_FILE="<custom_tuya_ble_config.h>" -DCFG_CP -DDEBUG_INFO="1" -DMTU_SIZE="247" -DHOST_CONFIG="4" -DHCI_TL_NONE="1" -DENABLE_LOG_ROM_="0" -D_BUILD_FOR_DTM_="0" -DDEBUG_INFO="1" -DDBG_ROM_MAIN="0" -DAPP_CFG="0" -DOSALMEM_METRICS="0" -DPHY_MCU_TYPE="MCU_BUMBEE_M0" -DCFG_SLEEP_MODE="PWR_MODE_NO_SLEEP" -DDEF_GAPBOND_MGR_ENABLE="0" -DUSE_FS="0" -DMAX_NUM_LL_CONN="1"-o .\objects\tuya_ble_port_phy62xx.o --omf_browse .\objects\tuya_ble_port_phy62xx.crf --depend .\objects\tuya_ble_port_phy62xx.d)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_type.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_stdlib.h)(0x612C9862)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
@@ -1515,7 +1515,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\board\include\ty_system.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\board.h)(0x628EE0D6)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5475F2FE)
@@ -1542,7 +1542,7 @@ I (..\tuya_ble_sdk_demo\board\include\ty_ble.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\include\ty_uart.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\include\ty_flash.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\include\ty_timer.h)(0x612C9862)
-F (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)()
+F (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)()
 F (.\main.c)(0x612C9862)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I..\..\..\PHY62XX_SDK_3.1.1\components\inc -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\controller -I..\..\..\PHY62XX_SDK_3.1.1\components\osal\include -I..\..\..\PHY62XX_SDK_3.1.1\components\common -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\include -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\hci -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\host -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\ota_app -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\DevInfo -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\SimpleProfile -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\Roles -I.\source -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\crc16 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\clock -I..\..\..\PHY62XX_SDK_3.1.1\components\arch\cm0 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwrmgr -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\uart -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\gpio -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\timer -I..\..\..\PHY62XX_SDK_3.1.1\misc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\log -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\cliface -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\key -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwm -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\adc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\spi -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\i2c -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\flash -I..\tuya_ble_sdk_demo\app -I..\tuya_ble_sdk_demo\board -I..\tuya_ble_sdk_demo\board\include -I..\tuya_ble_sdk_demo\board\phy62xx\ota -I..\tuya_ble_sdk_demo\board\phy62xx\service -I..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port -I..\tuya_ble_sdk_demo\components\ty_util -I..\tuya_ble_sdk_demo\components\ty_oled -I..\tuya_ble_sdk_demo\components\ty_key_press -I..\tuya_ble_sdk_demo\components\external\easylogger\inc -I..\tuya_ble_sdk_demo\tuya_ble_sdk -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\product_test -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\uart_common -I..\tuya_ble_sdk_demo\tuya_ble_sdk\extern_components\mbedtls -I..\tuya_ble_sdk_demo\tuya_ble_sdk\port -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\fs -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib --diag_suppress=177,550,186,545,188,68,940 -DADV_NCONN_CFG=0x01  -DADV_CONN_CFG=0x02  -DSCAN_CFG=0x04   -DINIT_CFG=0x08   -DBROADCASTER_CFG=0x01 -DOBSERVER_CFG=0x02  -DPERIPHERAL_CFG=0x04  -DCENTRAL_CFG=0x08 -I D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="514" -D_RTE_ -DARMCM0 -DCFG_SRAM_RETENTION_LOW_CURRENT_LDO_ENABLE -DCUSTOMIZED_TUYA_BLE_CONFIG_FILE="<custom_tuya_ble_config.h>" -DCFG_CP -DDEBUG_INFO="1" -DMTU_SIZE="247" -DHOST_CONFIG="4" -DHCI_TL_NONE="1" -DENABLE_LOG_ROM_="0" -D_BUILD_FOR_DTM_="0" -DDEBUG_INFO="1" -DDBG_ROM_MAIN="0" -DAPP_CFG="0" -DOSALMEM_METRICS="0" -DPHY_MCU_TYPE="MCU_BUMBEE_M0" -DCFG_SLEEP_MODE="PWR_MODE_NO_SLEEP" -DDEF_GAPBOND_MGR_ENABLE="0" -DUSE_FS="0" -DMAX_NUM_LL_CONN="1"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\..\..\PHY62XX_SDK_3.1.1\components\inc\bus_dev.h)(0x61446C96)
 I (..\..\..\PHY62XX_SDK_3.1.1\components\inc\mcu.h)(0x61446C96)
@@ -2236,7 +2236,7 @@ I (..\..\..\PHY62XX_SDK_3.1.1\components\inc\version.h)(0x61446C96)
 I (..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwrmgr\pwrmgr.h)(0x61446C96)
 F (..\..\..\PHY62XX_SDK_3.1.1\lib\ble_host.lib)(0x61446C96)()
 F (..\..\..\PHY62XX_SDK_3.1.1\lib\rf.lib)(0x61446C96)()
-F (.\source\OSAL_SimpleBLEPeripheral.c)(0x62909788)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I..\..\..\PHY62XX_SDK_3.1.1\components\inc -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\controller -I..\..\..\PHY62XX_SDK_3.1.1\components\osal\include -I..\..\..\PHY62XX_SDK_3.1.1\components\common -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\include -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\hci -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\host -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\ota_app -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\DevInfo -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\SimpleProfile -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\Roles -I.\source -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\crc16 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\clock -I..\..\..\PHY62XX_SDK_3.1.1\components\arch\cm0 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwrmgr -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\uart -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\gpio -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\timer -I..\..\..\PHY62XX_SDK_3.1.1\misc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\log -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\cliface -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\key -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwm -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\adc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\spi -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\i2c -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\flash -I..\tuya_ble_sdk_demo\app -I..\tuya_ble_sdk_demo\board -I..\tuya_ble_sdk_demo\board\include -I..\tuya_ble_sdk_demo\board\phy62xx\ota -I..\tuya_ble_sdk_demo\board\phy62xx\service -I..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port -I..\tuya_ble_sdk_demo\components\ty_util -I..\tuya_ble_sdk_demo\components\ty_oled -I..\tuya_ble_sdk_demo\components\ty_key_press -I..\tuya_ble_sdk_demo\components\external\easylogger\inc -I..\tuya_ble_sdk_demo\tuya_ble_sdk -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\product_test -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\uart_common -I..\tuya_ble_sdk_demo\tuya_ble_sdk\extern_components\mbedtls -I..\tuya_ble_sdk_demo\tuya_ble_sdk\port -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\fs -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib --diag_suppress=177,550,186,545,188,68,940 -DADV_NCONN_CFG=0x01  -DADV_CONN_CFG=0x02  -DSCAN_CFG=0x04   -DINIT_CFG=0x08   -DBROADCASTER_CFG=0x01 -DOBSERVER_CFG=0x02  -DPERIPHERAL_CFG=0x04  -DCENTRAL_CFG=0x08 -I D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="514" -D_RTE_ -DARMCM0 -DCFG_SRAM_RETENTION_LOW_CURRENT_LDO_ENABLE -DCUSTOMIZED_TUYA_BLE_CONFIG_FILE="<custom_tuya_ble_config.h>" -DCFG_CP -DDEBUG_INFO="1" -DMTU_SIZE="247" -DHOST_CONFIG="4" -DHCI_TL_NONE="1" -DENABLE_LOG_ROM_="0" -D_BUILD_FOR_DTM_="0" -DDEBUG_INFO="1" -DDBG_ROM_MAIN="0" -DAPP_CFG="0" -DOSALMEM_METRICS="0" -DPHY_MCU_TYPE="MCU_BUMBEE_M0" -DCFG_SLEEP_MODE="PWR_MODE_NO_SLEEP" -DDEF_GAPBOND_MGR_ENABLE="0" -DUSE_FS="0" -DMAX_NUM_LL_CONN="1"-o .\objects\osal_simplebleperipheral.o --omf_browse .\objects\osal_simplebleperipheral.crf --depend .\objects\osal_simplebleperipheral.d)
+F (.\source\OSAL_SimpleBLEPeripheral.c)(0x629438E6)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I..\..\..\PHY62XX_SDK_3.1.1\components\inc -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\controller -I..\..\..\PHY62XX_SDK_3.1.1\components\osal\include -I..\..\..\PHY62XX_SDK_3.1.1\components\common -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\include -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\hci -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\host -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\ota_app -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\DevInfo -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\SimpleProfile -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\Roles -I.\source -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\crc16 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\clock -I..\..\..\PHY62XX_SDK_3.1.1\components\arch\cm0 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwrmgr -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\uart -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\gpio -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\timer -I..\..\..\PHY62XX_SDK_3.1.1\misc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\log -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\cliface -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\key -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwm -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\adc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\spi -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\i2c -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\flash -I..\tuya_ble_sdk_demo\app -I..\tuya_ble_sdk_demo\board -I..\tuya_ble_sdk_demo\board\include -I..\tuya_ble_sdk_demo\board\phy62xx\ota -I..\tuya_ble_sdk_demo\board\phy62xx\service -I..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port -I..\tuya_ble_sdk_demo\components\ty_util -I..\tuya_ble_sdk_demo\components\ty_oled -I..\tuya_ble_sdk_demo\components\ty_key_press -I..\tuya_ble_sdk_demo\components\external\easylogger\inc -I..\tuya_ble_sdk_demo\tuya_ble_sdk -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\product_test -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\uart_common -I..\tuya_ble_sdk_demo\tuya_ble_sdk\extern_components\mbedtls -I..\tuya_ble_sdk_demo\tuya_ble_sdk\port -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\fs -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib --diag_suppress=177,550,186,545,188,68,940 -DADV_NCONN_CFG=0x01  -DADV_CONN_CFG=0x02  -DSCAN_CFG=0x04   -DINIT_CFG=0x08   -DBROADCASTER_CFG=0x01 -DOBSERVER_CFG=0x02  -DPERIPHERAL_CFG=0x04  -DCENTRAL_CFG=0x08 -I D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="514" -D_RTE_ -DARMCM0 -DCFG_SRAM_RETENTION_LOW_CURRENT_LDO_ENABLE -DCUSTOMIZED_TUYA_BLE_CONFIG_FILE="<custom_tuya_ble_config.h>" -DCFG_CP -DDEBUG_INFO="1" -DMTU_SIZE="247" -DHOST_CONFIG="4" -DHCI_TL_NONE="1" -DENABLE_LOG_ROM_="0" -D_BUILD_FOR_DTM_="0" -DDEBUG_INFO="1" -DDBG_ROM_MAIN="0" -DAPP_CFG="0" -DOSALMEM_METRICS="0" -DPHY_MCU_TYPE="MCU_BUMBEE_M0" -DCFG_SLEEP_MODE="PWR_MODE_NO_SLEEP" -DDEF_GAPBOND_MGR_ENABLE="0" -DUSE_FS="0" -DMAX_NUM_LL_CONN="1"-o .\objects\osal_simplebleperipheral.o --omf_browse .\objects\osal_simplebleperipheral.crf --depend .\objects\osal_simplebleperipheral.d)
 I (..\..\..\PHY62XX_SDK_3.1.1\components\osal\include\OSAL.h)(0x61446C96)
 I (..\..\..\PHY62XX_SDK_3.1.1\components\osal\include\comdef.h)(0x61446C96)
 I (..\..\..\PHY62XX_SDK_3.1.1\components\inc\types.h)(0x61446C96)
@@ -2290,7 +2290,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
 I (..\tuya_ble_sdk_demo\components\external\easylogger\inc\elog.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\components\external\easylogger\inc\elog_cfg.h)(0x612C9862)
 I (..\..\..\PHY62XX_SDK_3.1.1\components\driver\clock\clock.h)(0x61446C96)
-F (.\source\simpleBLEPeripheral.c)(0x628EECE2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I..\..\..\PHY62XX_SDK_3.1.1\components\inc -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\controller -I..\..\..\PHY62XX_SDK_3.1.1\components\osal\include -I..\..\..\PHY62XX_SDK_3.1.1\components\common -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\include -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\hci -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\host -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\ota_app -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\DevInfo -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\SimpleProfile -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\Roles -I.\source -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\crc16 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\clock -I..\..\..\PHY62XX_SDK_3.1.1\components\arch\cm0 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwrmgr -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\uart -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\gpio -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\timer -I..\..\..\PHY62XX_SDK_3.1.1\misc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\log -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\cliface -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\key -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwm -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\adc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\spi -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\i2c -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\flash -I..\tuya_ble_sdk_demo\app -I..\tuya_ble_sdk_demo\board -I..\tuya_ble_sdk_demo\board\include -I..\tuya_ble_sdk_demo\board\phy62xx\ota -I..\tuya_ble_sdk_demo\board\phy62xx\service -I..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port -I..\tuya_ble_sdk_demo\components\ty_util -I..\tuya_ble_sdk_demo\components\ty_oled -I..\tuya_ble_sdk_demo\components\ty_key_press -I..\tuya_ble_sdk_demo\components\external\easylogger\inc -I..\tuya_ble_sdk_demo\tuya_ble_sdk -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\product_test -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\uart_common -I..\tuya_ble_sdk_demo\tuya_ble_sdk\extern_components\mbedtls -I..\tuya_ble_sdk_demo\tuya_ble_sdk\port -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\fs -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib --diag_suppress=177,550,186,545,188,68,940 -DADV_NCONN_CFG=0x01  -DADV_CONN_CFG=0x02  -DSCAN_CFG=0x04   -DINIT_CFG=0x08   -DBROADCASTER_CFG=0x01 -DOBSERVER_CFG=0x02  -DPERIPHERAL_CFG=0x04  -DCENTRAL_CFG=0x08 -I D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="514" -D_RTE_ -DARMCM0 -DCFG_SRAM_RETENTION_LOW_CURRENT_LDO_ENABLE -DCUSTOMIZED_TUYA_BLE_CONFIG_FILE="<custom_tuya_ble_config.h>" -DCFG_CP -DDEBUG_INFO="1" -DMTU_SIZE="247" -DHOST_CONFIG="4" -DHCI_TL_NONE="1" -DENABLE_LOG_ROM_="0" -D_BUILD_FOR_DTM_="0" -DDEBUG_INFO="1" -DDBG_ROM_MAIN="0" -DAPP_CFG="0" -DOSALMEM_METRICS="0" -DPHY_MCU_TYPE="MCU_BUMBEE_M0" -DCFG_SLEEP_MODE="PWR_MODE_NO_SLEEP" -DDEF_GAPBOND_MGR_ENABLE="0" -DUSE_FS="0" -DMAX_NUM_LL_CONN="1"-o .\objects\simplebleperipheral.o --omf_browse .\objects\simplebleperipheral.crf --depend .\objects\simplebleperipheral.d)
+F (.\source\simpleBLEPeripheral.c)(0x62985DDB)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I..\..\..\PHY62XX_SDK_3.1.1\components\inc -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\controller -I..\..\..\PHY62XX_SDK_3.1.1\components\osal\include -I..\..\..\PHY62XX_SDK_3.1.1\components\common -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\include -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\hci -I..\..\..\PHY62XX_SDK_3.1.1\components\ble\host -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\ota_app -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\DevInfo -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\SimpleProfile -I..\..\..\PHY62XX_SDK_3.1.1\components\Profiles\Roles -I.\source -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\crc16 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\clock -I..\..\..\PHY62XX_SDK_3.1.1\components\arch\cm0 -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwrmgr -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\uart -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\gpio -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\timer -I..\..\..\PHY62XX_SDK_3.1.1\misc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\log -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\cliface -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\key -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\pwm -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\adc -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\spi -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\i2c -I..\..\..\PHY62XX_SDK_3.1.1\components\driver\flash -I..\tuya_ble_sdk_demo\app -I..\tuya_ble_sdk_demo\board -I..\tuya_ble_sdk_demo\board\include -I..\tuya_ble_sdk_demo\board\phy62xx\ota -I..\tuya_ble_sdk_demo\board\phy62xx\service -I..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port -I..\tuya_ble_sdk_demo\components\ty_util -I..\tuya_ble_sdk_demo\components\ty_oled -I..\tuya_ble_sdk_demo\components\ty_key_press -I..\tuya_ble_sdk_demo\components\external\easylogger\inc -I..\tuya_ble_sdk_demo\tuya_ble_sdk -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\product_test -I..\tuya_ble_sdk_demo\tuya_ble_sdk\app\uart_common -I..\tuya_ble_sdk_demo\tuya_ble_sdk\extern_components\mbedtls -I..\tuya_ble_sdk_demo\tuya_ble_sdk\port -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib -I..\..\..\PHY62XX_SDK_3.1.1\components\libraries\fs -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib\src -I..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\lib --diag_suppress=177,550,186,545,188,68,940 -DADV_NCONN_CFG=0x01  -DADV_CONN_CFG=0x02  -DSCAN_CFG=0x04   -DINIT_CFG=0x08   -DBROADCASTER_CFG=0x01 -DOBSERVER_CFG=0x02  -DPERIPHERAL_CFG=0x04  -DCENTRAL_CFG=0x08 -I D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="514" -D_RTE_ -DARMCM0 -DCFG_SRAM_RETENTION_LOW_CURRENT_LDO_ENABLE -DCUSTOMIZED_TUYA_BLE_CONFIG_FILE="<custom_tuya_ble_config.h>" -DCFG_CP -DDEBUG_INFO="1" -DMTU_SIZE="247" -DHOST_CONFIG="4" -DHCI_TL_NONE="1" -DENABLE_LOG_ROM_="0" -D_BUILD_FOR_DTM_="0" -DDEBUG_INFO="1" -DDBG_ROM_MAIN="0" -DAPP_CFG="0" -DOSALMEM_METRICS="0" -DPHY_MCU_TYPE="MCU_BUMBEE_M0" -DCFG_SLEEP_MODE="PWR_MODE_NO_SLEEP" -DDEF_GAPBOND_MGR_ENABLE="0" -DUSE_FS="0" -DMAX_NUM_LL_CONN="1"-o .\objects\simplebleperipheral.o --omf_browse .\objects\simplebleperipheral.crf --depend .\objects\simplebleperipheral.d)
 I (..\..\..\PHY62XX_SDK_3.1.1\components\ble\include\bcomdef.h)(0x61446C96)
 I (..\..\..\PHY62XX_SDK_3.1.1\misc\rom_sym_def.h)(0x61446C96)
 I (..\..\..\PHY62XX_SDK_3.1.1\components\osal\include\comdef.h)(0x61446C96)
@@ -2354,8 +2354,8 @@ I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_mem.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_api.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\sdk\include\tuya_ble_internal_config.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x612C9862)
-I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62874818)
+I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\custom_tuya_ble_config.h)(0x62986B6A)
+I (..\tuya_ble_sdk_demo\app\tuya_ble_sdk_demo.h)(0x62987099)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\tuya_ble_sdk\port\tuya_ble_port_peripheral.h)(0x612C9862)
 I (..\tuya_ble_sdk_demo\board\phy62xx\tuya_ble_port\tuya_ble_port_phy62xx.h)(0x612C9862)

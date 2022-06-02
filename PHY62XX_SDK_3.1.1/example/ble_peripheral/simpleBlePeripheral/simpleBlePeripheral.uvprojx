@@ -160,7 +160,7 @@
             <CpuDllArguments></CpuDllArguments>
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
+            <InitializationFile>.\ram_xip.ini</InitializationFile>
             <Driver>Segger\JL2CM3.dll</Driver>
           </TargetDlls>
         </DebugOption>
