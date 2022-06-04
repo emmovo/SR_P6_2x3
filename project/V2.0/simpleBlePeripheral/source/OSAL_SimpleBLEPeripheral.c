@@ -81,6 +81,8 @@
 #include "board.h"
 #include "clock.h"
 
+#include "app.h"
+
 /*********************************************************************
     GLOBAL VARIABLES
 */
@@ -131,7 +133,6 @@ uint16 test_task(uint8 task_id, uint16 events)
 void test_init(uint8 task_id)
 {
 		osal_set_event(task_id, 1);
-
 }
 
 // The order in this table must be identical to the task initialization calls below in osalInitTask.
@@ -154,7 +155,7 @@ const pTaskEventHandlerFn tasksArr[] =
     SimpleBLEPeripheral_ProcessEvent,                                 // task 8
     phy_timer_ProcessEvent,                                           // task 9
 //		test_task,
-
+		app_task,
 };
 
 const uint8 tasksCnt = sizeof( tasksArr ) / sizeof( tasksArr[0] );
@@ -207,6 +208,8 @@ void osalInitTasks( void )
     phy_timer_init( taskID++ );
 		
 //		test_init(taskID++);
+
+		app_task_init( taskID++ );
 		
 }
 #endif
