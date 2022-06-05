@@ -56,9 +56,9 @@ void app(void)
 // 		main_logic_onekey();
 // #endif
 
-// #ifdef Intelligent_version
-// 		main_logic();
-// #endif
+
+ 		main_logic();
+
 
 
 // 	connection_show();
@@ -109,7 +109,6 @@ uint16 app_task(uint8 task_id, uint16 events)
 	
 		WaitMs(1000);
 		
-		common_weight_init();
 		//========
 		app();
 		return 1;
