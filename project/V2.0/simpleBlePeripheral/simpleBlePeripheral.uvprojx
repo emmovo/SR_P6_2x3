@@ -681,6 +681,31 @@
               <FileType>1</FileType>
               <FilePath>..\app\app.c</FilePath>
             </File>
+            <File>
+              <FileName>app_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\app_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>timestamp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\timestamp.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\app_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>main_logic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\main_logic.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_btn.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\app_btn.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

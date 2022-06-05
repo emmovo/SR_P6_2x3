@@ -45,6 +45,7 @@
 #include "ty_system.h"
 #include "simpleBLEPeripheral.h"
 
+#include "app.h"
 
 
 
@@ -236,8 +237,16 @@ static void hal_init(void)
 }
 
 
+
+
+
 void peripheral_init(void)
 {
+
+    //======test
+	
+
+    //==========
     
     // battery_init();      
 
@@ -250,48 +259,48 @@ void peripheral_init(void)
 	// 		authorization_completion_flag_set(authorized);
 	// }
 
-    // flash_init();
+    flash_init();
 
-    // btn_init();
+    btn_init();
 
-    // if(authorization_completion_flag() == authorized)
-	// {
+   if(authorization_completion_flag() == authorized)
+	{
 	
-		// tick_10ms_init();
+		tick_10ms_init();
 		
-		// uint32_t old_tick = timer_get_systick();
+		uint32_t old_tick = timer_get_systick();
 		
 		
-		// while (timer_get_systick() - old_tick < 1000)
-		// {
+		while (timer_get_systick() - old_tick < 1000)
+		{
 			
 			
-		// 	if (gpio_get_input(GPIOD_3) == 0)
-		// 	{
-		// 		REG_APB5_GPIOA_CFG |= (1 << 2);
-		// 		gpio_config(GPIOA_2, OUTPUT, PULL_NONE);
-		// 		gpio_set(GPIOA_2, 1);
-		// 		Delay_ms(1);
-		// 		ledseg_init();
-		// 		led_init();
-		// 		battery_check();
+			// if (gpio_get_input(GPIOD_3) == 0)
+			// {
+			// 	REG_APB5_GPIOA_CFG |= (1 << 2);
+			// 	gpio_config(GPIOA_2, OUTPUT, PULL_NONE);
+			// 	gpio_set(GPIOA_2, 1);
+			// 	Delay_ms(1);
+			// 	ledseg_init();
+			// 	led_init();
+			// 	battery_check();
 				
-		// 	}
-		// 	if (!btn_get_pwr_btn())
-		// 	{
+			// }
+			// if (!btn_get_pwr_btn())
+			// {
 				
-		// 		if(authorization_completion_flag() == authorized)
-		// 		{
-		// 				sleep_sys_down();
-		// 		}
+			// 	if(authorization_completion_flag() == authorized)
+			// 	{
+			// 			sleep_sys_down();
+			// 	}
 					
-		// 	}
+			// }
 			
-		// }
+		}
 		
 		// wdt_enable(0xffff);
 
-		//enable pwr
+		// enable pwr
 		// REG_APB5_GPIOA_CFG |= (1 << 2);
 		// gpio_config(GPIOA_2, OUTPUT, PULL_NONE);
 		// gpio_set(GPIOA_2, 1);
@@ -299,15 +308,15 @@ void peripheral_init(void)
 
 		// ledseg_init();
 		// led_init();
-//		
+		
 		// vibrator_init();
-//		
+		
 
 		// hall_init();
 
 		// ledseg_pwr_on();
 
-		// common_weight = flash_readword(FLASH_SPACE_TYPE_MAIN, 0x27600 / 4);
+		// common_weight = flash_readword(FLSH_SPACE_TYPE_MAIN, 0x27600 / 4);
 
 
 		// if (common_weight == 0xffffffff)
@@ -327,7 +336,7 @@ void peripheral_init(void)
 		// 	main_logic_mode_set(mode_main_idle);
 			
 		// }
-	// }
+	}
 }
 
 
@@ -346,7 +355,7 @@ int  main(void)
     if(hal_gpio_read(P20)==1)
         rf_phy_direct_test();
 		
-		peripheral_init();
+	
 
     TY_PRINTF("SDK Version ID %08x",SDK_VER_RELEASE_ID);
     TY_PRINTF("rfClk %d rcClk %d sysClk %d tpCap[%02x %02x]",g_rfPhyClkSel,g_clk32K_config,g_system_clk,g_rfPhyTpCal0,g_rfPhyTpCal1);
@@ -354,6 +363,9 @@ int  main(void)
     TY_PRINTF("sizeof(g_pConnectionBuffer) = %d, sizeof(pConnContext) = %d, sizeof(largeHeap)=%d",\
         sizeof(g_pConnectionBuffer), sizeof(pConnContext),sizeof(g_largeHeap));
     TY_PRINTF("[REST CAUSE] %d",g_system_reset_cause);
+		
+		peripheral_init();
+		
     app_main();
 }
 

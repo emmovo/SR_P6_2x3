@@ -33,6 +33,7 @@
 #include "osal_cbTimer.h"
 
 #include "app.h"
+#include "ty_flash.h"
 
 
 
@@ -103,6 +104,13 @@ void connection_show(void)
 
 uint16 app_task(uint8 task_id, uint16 events)
 {
+	
+		//=====test
+	
+		WaitMs(1000);
+		
+		TY_PRINTF("gpio %d", hal_gpio_read(GPIO_P14));
+		//========
 		app();
 		return 1;
 }
