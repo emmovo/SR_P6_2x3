@@ -238,7 +238,7 @@ static void hal_init(void)
 
 
 
-
+extern uint32_t common_weight;
 
 void peripheral_init(void)
 {
@@ -316,13 +316,7 @@ void peripheral_init(void)
 
 		// ledseg_pwr_on();
 
-		// common_weight = flash_readword(FLSH_SPACE_TYPE_MAIN, 0x27600 / 4);
-
-
-		// if (common_weight == 0xffffffff)
-		// {
-		// 	common_weight = 75;
-		// }
+		common_weight = common_weight_init();
 		
 		// ledseg_show_all();
 		// vibrator_set(1);

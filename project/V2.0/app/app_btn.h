@@ -12,3 +12,4 @@
 #include <stdbool.h>
 
 void btn_init(void);
+

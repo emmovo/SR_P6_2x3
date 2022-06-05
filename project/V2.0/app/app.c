@@ -2,7 +2,7 @@
  * @Author: emmovo mingjkl@live.com
  * @Date: 2022-06-04 12:38:27
  * @LastEditors: emmovo mingjkl@live.com
- * @LastEditTime: 2022-06-04 13:29:41
+ * @LastEditTime: 2022-06-05 13:48:43
  * @FilePath: \V2.0\app\app.c
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -109,7 +109,7 @@ uint16 app_task(uint8 task_id, uint16 events)
 	
 		WaitMs(1000);
 		
-		TY_PRINTF("gpio %d", hal_gpio_read(GPIO_P14));
+		common_weight_init();
 		//========
 		app();
 		return 1;
