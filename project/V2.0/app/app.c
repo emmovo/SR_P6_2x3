@@ -107,7 +107,7 @@ uint16 app_task(uint8 task_id, uint16 events)
 	
 		//=====test
 	
-		WaitMs(1000);
+		//WaitMs(1000);
 		
 		//========
 		app();

@@ -197,7 +197,7 @@ void main_logic(void)
 				}
 				else if(main_logic_mode == mode_1_level_select)
 				{
-						main_logic_target_time_set(target_time_level[mode_param.target_time_level_pointer] * 60);
+						// main_logic_target_time_set(target_time_level[mode_param.target_time_level_pointer] * 60);
 						// ble_dp_return_target_time(target_time_level[mode_param.target_time_level_pointer] * 60);
 					
 						if(mode_param.target_time_level_pointer > 5)

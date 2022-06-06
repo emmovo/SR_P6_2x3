@@ -2,8 +2,8 @@
  * @Author: emmovo
  * @Date: 2022-05-03 08:51:54
  * @LastEditors: emmovo
- * @LastEditTime: 2022-05-25 14:25:35
- * @FilePath: \skippingRope_phy6222\README.md
+ * @LastEditTime: 2022-06-06 13:42:00
+ * @FilePath: \undefinedd:\WorkingData\Evaluate_Project\skippingRope_phy6222\README.md
  * @Description: 
  * 
  * Copyright (c) 2022 by mingjkl@live.com/emmovo.com, All Rights Reserved. 
@@ -56,14 +56,14 @@
 
 基于example\ble_peripheral\simpleBlePeripheral进行以下功能程序编写：
 
-- IO读写
-- UART通讯
+- IO读写    √
+- UART通讯  √
 - ADC数据采集
 - PWM
-- FLASH读写
+- FLASH读写 √
 - 休眠管理
 - Watchdog
-- Timer
+- Timer √
 
 ### 3.2 段码屏驱动程序编写
 
@@ -72,19 +72,19 @@
 ### 3.3 BLE基础功能实现
 
 基于example\ble_peripheral\simpleBlePeripheral进行以下功能程序编写：
-- 设备GAP信息广播
-- GATT程序编写
-- 数据交互服务定义
+- 设备GAP信息广播   √
+- GATT程序编写  √
+- 数据交互服务定义  
 - OTA服务程序
 - OTA Bootloader程序
-- 匹配信息重置功能程序
+- 匹配信息重置功能程序  √
 - 设备电量上报程序
 
 ### 3.4 Tuya代码移植和功能实现
 
 基于example\ble_peripheral\simpleBlePeripheral进行以下功能程序编写：
-- tuya_ble_api移植
-- tuya service task建立
+- tuya_ble_api移植  √
+- tuya service task建立 √
 - tuya产测功能移植
 - tuya ota功能移植
 
@@ -95,10 +95,10 @@
 - USB充电检测和电池电量采集
 - 段码屏背光亮度调节功能实现
 - 蜂鸣器驱动程序编写
-- FLASH数据读写
+- FLASH数据读写 √
 - 休眠和唤醒逻辑移植
 - Watchdog功能移植
-- Timer驱动程序移植
+- Timer驱动程序移植 
 - 运动逻辑代码移植
 
 

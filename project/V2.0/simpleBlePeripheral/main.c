@@ -220,7 +220,11 @@ static void hal_init(void)
 {
     hal_low_power_io_init();
     clk_init(g_system_clk); //system init
+	
+	
     hal_rtc_clock_config((CLK32K_e)g_clk32K_config);
+	
+	
     hal_pwrmgr_init();
     
     hal_pwrmgr_register(MOD_USR2, ty_sleep_handler, ty_wakeup_handler);
@@ -338,7 +342,7 @@ void peripheral_init(void)
 int  main(void)
 {
     g_system_clk = SYS_CLK_XTAL_16M;//SYS_CLK_XTAL_16M;//SYS_CLK_DLL_64M;
-    g_clk32K_config = CLK_32K_XTAL;//CLK_32K_XTAL;//CLK_32K_XTAL,CLK_32K_RCOSC
+    g_clk32K_config = CLK_32K_RCOSC;//CLK_32K_XTAL;//CLK_32K_XTAL,CLK_32K_RCOSC
     drv_irq_init();
     init_config();
     extern void ll_patch_slave(void);

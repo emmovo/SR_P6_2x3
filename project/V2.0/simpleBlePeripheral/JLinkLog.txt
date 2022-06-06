@@ -1,58 +1,76 @@
-T6904 000:078.128   SEGGER J-Link V7.62b Log File
-T6904 000:078.252   DLL Compiled: Mar  8 2022 15:11:05
-T6904 000:078.258   Logging started @ 2022-06-02 08:53
-T6904 000:078.264 - 78.267ms
-T6904 000:078.271 JLINK_SetWarnOutHandler(...)
-T6904 000:078.278 - 0.009ms
-T6904 000:078.284 JLINK_OpenEx(...)
-T6904 000:082.007   Firmware: J-Link V11 compiled Mar  3 2022 10:16:14
-T6904 000:082.392   Firmware: J-Link V11 compiled Mar  3 2022 10:16:14
-T6904 000:102.890   Hardware: V11.00
-T6904 000:102.906   S/N: 261007779
-T6904 000:102.914   OEM: SEGGER-EDU
-T6904 000:102.922   Feature(s): FlashBP, GDB
-T6904 000:115.230   USB speed mode: High speed (480 MBit/s)
-T6904 000:115.517   TELNET listener socket opened on port 19021
-T6904 000:115.643   WEBSRV WEBSRV_Init(): Starting webserver thread(s)
-T6904 000:115.716   WEBSRV Failed to put socket into listener state (port 19080)
-T6904 000:115.928   WEBSRV Webserver running on local port 19081
-T6904 000:119.731 - 41.456ms returns "O.K."
-T6904 000:119.772 JLINK_SetErrorOutHandler(...)
-T6904 000:119.778 - 0.009ms
-T6904 000:119.795 JLINK_ExecCommand("ProjectFile = "D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral\JLinkSettings.ini"", ...). 
-T6904 000:128.190   Ref file found at: C:\Keil_v5\ARM\Segger\JLinkDevices.ref
-T6904 000:128.286   XML referenced by ref file: C:\Program Files\SEGGER\JLink\JLinkDevices.xml
-T6904 000:128.937   C:\Program Files\SEGGER\JLink\JLinkDevices.xml evaluated successfully.
-T6904 000:163.731 - 43.944ms returns 0x00
-T6904 000:166.802 JLINK_ExecCommand("Device = ARMCM0", ...). 
-T6904 000:169.695   Device "CORTEX-M0" selected.
-T6904 000:170.019 - 3.208ms returns 0x00
-T6904 000:170.035 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
-T6904 000:170.045 - 0.005ms returns 0x01
-T6904 000:170.052 JLINK_GetHardwareVersion()
-T6904 000:170.058 - 0.008ms returns 110000
-T6904 000:170.068 JLINK_GetDLLVersion()
-T6904 000:170.073 - 0.007ms returns 76202
-T6904 000:170.079 JLINK_GetOEMString(...)
-T6904 000:178.267 JLINK_GetDLLVersion()
-T6904 000:178.280 - 0.015ms returns 76202
-T6904 000:178.287 JLINK_GetCompileDateTime()
-T6904 000:178.292 - 0.008ms
-T6904 000:181.051 JLINK_GetFirmwareString(...)
-T6904 000:181.062 - 0.014ms
-T6904 000:184.029 JLINK_GetHardwareVersion()
-T6904 000:184.040 - 0.013ms returns 110000
-T6904 000:186.736 JLINK_GetSN()
-T6904 000:186.746 - 0.012ms returns 261007779
-T6904 000:189.487 JLINK_GetOEMString(...)
-T6904 000:197.651 JLINK_TIF_Select(JLINKARM_TIF_SWD)
-T6904 000:198.395 - 0.751ms returns 0x00
-T6904 000:198.423 JLINK_HasError()
-T6904 000:198.435 JLINK_SetSpeed(2000)
-T6904 000:198.591 - 0.170ms
-T6904 000:198.629 JLINK_GetId()
-T6904 000:784.519 - 585.907ms returns 0x00000000
-T6904 002:005.922 JLINK_Close()
-T6904 002:008.891 - 2.988ms
-T6904 002:008.914   
-T6904 002:008.920   Closed
+T631C 000:249.032   SEGGER J-Link V7.62b Log File
+T631C 000:249.158   DLL Compiled: Mar  8 2022 15:11:05
+T631C 000:249.164   Logging started @ 2022-06-02 09:44
+T631C 000:249.169 - 249.172ms
+T631C 000:249.178 JLINK_SetWarnOutHandler(...)
+T631C 000:249.185 - 0.009ms
+T631C 000:249.191 JLINK_OpenEx(...)
+T631C 000:252.644   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T631C 000:252.962   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T631C 000:253.093   Decompressing FW timestamp took 112 us
+T631C 000:258.880   Hardware: V9.40
+T631C 000:258.895   S/N: 59406895
+T631C 000:258.919   OEM: SEGGER
+T631C 000:258.929   Feature(s): RDI, GDB, FlashDL, FlashBP, JFlash
+T631C 000:271.600   TELNET listener socket opened on port 19021
+T631C 000:271.779   WEBSRV WEBSRV_Init(): Starting webserver thread(s)
+T631C 000:271.831   WEBSRV Failed to put socket into listener state (port 19080)
+T631C 000:271.847   WEBSRV Failed to put socket into listener state (port 19081)
+T631C 000:272.044   WEBSRV Webserver running on local port 19082
+T631C 000:277.138 - 27.956ms returns "O.K."
+T631C 000:277.161 JLINK_SetErrorOutHandler(...)
+T631C 000:277.167 - 0.009ms
+T631C 000:277.183 JLINK_ExecCommand("ProjectFile = "D:\WorkingData\Evaluate_Project\skippingRope_phy6222\project\V2.0\simpleBlePeripheral\JLinkSettings.ini"", ...). 
+T631C 000:285.400   Ref file found at: C:\Keil_v5\ARM\Segger\JLinkDevices.ref
+T631C 000:285.497   XML referenced by ref file: C:\Program Files\SEGGER\JLink\JLinkDevices.xml
+T631C 000:286.224   C:\Program Files\SEGGER\JLink\JLinkDevices.xml evaluated successfully.
+T631C 000:316.976 - 39.805ms returns 0x00
+T631C 000:317.041 JLINK_ExecCommand("Device = ARMCM0", ...). 
+T631C 000:317.064   Device "CORTEX-M0" selected.
+T631C 000:317.377 - 0.332ms returns 0x00
+T631C 000:317.388 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
+T631C 000:317.397 - 0.004ms returns 0x01
+T631C 000:317.404 JLINK_GetHardwareVersion()
+T631C 000:317.409 - 0.008ms returns 94000
+T631C 000:317.420 JLINK_GetDLLVersion()
+T631C 000:317.425 - 0.007ms returns 76202
+T631C 000:317.431 JLINK_GetOEMString(...)
+T631C 000:317.438 JLINK_GetFirmwareString(...)
+T631C 000:317.443 - 0.007ms
+T631C 000:317.451 JLINK_GetDLLVersion()
+T631C 000:317.457 - 0.007ms returns 76202
+T631C 000:317.462 JLINK_GetCompileDateTime()
+T631C 000:317.467 - 0.007ms
+T631C 000:317.474 JLINK_GetFirmwareString(...)
+T631C 000:317.480 - 0.007ms
+T631C 000:317.486 JLINK_GetHardwareVersion()
+T631C 000:317.491 - 0.007ms returns 94000
+T631C 000:317.498 JLINK_GetSN()
+T631C 000:317.503 - 0.008ms returns 59406895
+T631C 000:317.510 JLINK_GetOEMString(...)
+T631C 000:317.518 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T631C 000:317.922 - 0.430ms returns 0x00
+T631C 000:317.956 JLINK_HasError()
+T631C 000:317.969 JLINK_SetSpeed(2000)
+T631C 000:318.019 - 0.053ms
+T631C 000:318.269 JLINK_HasError()
+T631C 000:318.279 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T631C 000:318.285 - 0.008ms returns JLINKARM_RESET_TYPE_NORMAL
+T631C 000:318.292 JLINK_Reset()
+T631C 000:908.059 - 589.791ms
+T631C 000:908.098 JLINK_GetId()
+T631C 001:189.138 - 281.062ms returns 0x00000000
+T631C 001:189.174 JLINK_GetId()
+T631C 001:469.184 - 280.038ms returns 0x00000000
+T631C 001:473.608 JLINK_GetFirmwareString(...)
+T631C 001:473.622 - 0.016ms
+T71F0 010:261.292 Looking for J-Link GUI Server exe at: C:\Keil_v5\ARM\Segger\JLinkGUIServer.exe
+T71F0 010:261.396 Looking for J-Link GUI Server exe at: C:\Program Files\SEGGER\JLink\JLinkGUIServer.exe
+T71F0 010:261.435 Forking J-Link GUI Server: C:\Program Files\SEGGER\JLink\JLinkGUIServer.exe
+T71F0 010:265.742 J-Link GUI Server info: "J-Link GUI server V7.62b "
+T7238 027:750.176   
+  ***** Error: Connection to emulator lost!
+T631C 043:093.447 JLINK_Close()
+T631C 043:098.702 - 5.278ms
+T631C 043:098.728   
+T631C 043:098.734   Closed
