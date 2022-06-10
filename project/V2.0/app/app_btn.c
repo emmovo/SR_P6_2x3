@@ -16,8 +16,8 @@
 void btn_init(void)
 {
 	hal_gpio_init();
-	hal_gpio_pin_init(GPIO_P14, GPIO_INPUT);
-	hal_gpio_pull_set(GPIO_P14, GPIO_PULL_UP);
+//	hal_gpio_pin_init(GPIO_P14, GPIO_INPUT);
+//	hal_gpio_pull_set(GPIO_P14, GPIO_PULL_UP);
 }
 
 

@@ -57,6 +57,9 @@
 #include "gpio.h"
 #include "clock.h"
 
+#include "ty_adc.h"
+
+
 
 /**************************************************************************************************
     FUNCTIONS
@@ -73,6 +76,10 @@
     @return      none
  **************************************************************************************************
 */
+
+
+
+
 int app_main(void)
 {
 
@@ -89,6 +96,14 @@ int app_main(void)
 		hal_gpio_write(GPIO_P32, false);
 		hal_gpio_write(GPIO_P33, true);
 	
+		hal_gpio_pin_init(GPIO_P11, GPIO_OUTPUT);
+	
+		hal_gpio_write(GPIO_P11, false);
+
+		hal_gpio_pin_init(GPIO_P25, GPIO_INPUT);
+	
+		hal_gpio_pull_set(GPIO_P25, GPIO_FLOATING);
+	
 		for(uint8_t i = 0; i < 5; i++)
 		{
 			hal_gpio_write(GPIO_P32, false);
@@ -97,6 +112,7 @@ int app_main(void)
 			WaitMs(200);
 		}
 	
+
 
 
     /* Start OSAL */

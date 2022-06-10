@@ -11,7 +11,7 @@
  * LOCAL CONSTANT
  */
 #define MAX_SAMPLE_POINT    64
-#define PHY_ADC_PIN_IDX     4  // Notes: It MUST be updated accordingly in case changing channel.
+#define PHY_ADC_PIN_IDX     5  // Notes: It MUST be updated accordingly in case changing channel.
 
 /*********************************************************************
  * LOCAL STRUCT
@@ -25,7 +25,7 @@ static uint8_t  channel_done_flag = 0;
 static uint16_t g_adc_value = 0;
  
 static adc_Cfg_t phy_adc_cfg = {
-    .channel = ADC_BIT(ADC_CH2N_P24),
+    .channel = ADC_BIT(ADC_CH2P_P14),
     .is_continue_mode = FALSE,
     .is_differential_mode = 0x00,
     .is_high_resolution = 0x00,
@@ -56,14 +56,25 @@ static void adc_evt(adc_Evt_t* pev)
     if((pev->type != HAL_ADC_EVT_DATA) || (pev->ch < 2)) {
         return;
     }
+		
+		
 
     osal_memcpy(adc_debug, pev->data, 2*(pev->size));
     channel_done_flag |= BIT(pev->ch);
+		
+		
 
     if(channel_done_flag == phy_adc_cfg.channel) {
+			
+//			TY_PRINTF("%d %d %x %d %d", pev->type, pev->ch, pev->data, pev->size, channel_done_flag);
+			
         if(channel_done_flag & BIT(PHY_ADC_PIN_IDX)) {
+					
             is_high_resolution = (phy_adc_cfg.is_high_resolution & BIT(PHY_ADC_PIN_IDX))?TRUE:FALSE;
             is_differential_mode = (phy_adc_cfg.is_differential_mode & BIT(PHY_ADC_PIN_IDX))?TRUE:FALSE;
+					
+					TY_PRINTF("h:%d d:%d", is_high_resolution, is_differential_mode);
+					
             value = hal_adc_value_cal((adc_CH_t)PHY_ADC_PIN_IDX, adc_debug, pev->size, is_high_resolution, is_differential_mode);
 
             g_adc_value = (uint16_t)(value*1000);
@@ -79,14 +90,16 @@ FN:
 static void adcMeasureTask( void )
 {
     int ret;
-    uint8_t batt_ch = ADC_CH2N_P24;
+    uint8_t batt_ch = ADC_CH2P_P14;
     GPIO_Pin_e pin;
 
     pin = s_pinmap[batt_ch];
+	
+	
     hal_gpio_cfg_analog_io(pin, Bit_DISABLE);
     hal_gpio_write(pin, 1);  // lbl
     ret = hal_adc_config_channel(phy_adc_cfg, adc_evt);
-    hal_gpio_cfg_analog_io(pin, Bit_DISABLE);
+    hal_gpio_cfg_analog_io(pin, Bit_ENABLE);
 
     if(ret) {
         LOG("ret = %d\n",ret);
@@ -101,7 +114,7 @@ FN:
 */
 uint32_t ty_adc_init(ty_adc_t* p_adc)
 {
-    p_adc->channel = ADC_CH2N_P24;
+    p_adc->channel = ADC_CH2P_P14;
     p_adc->value = 0;
     hal_adc_init();
     return 0;

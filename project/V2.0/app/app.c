@@ -1,8 +1,8 @@
 /*
  * @Author: emmovo mingjkl@live.com
  * @Date: 2022-06-04 12:38:27
- * @LastEditors: emmovo mingjkl@live.com
- * @LastEditTime: 2022-06-05 13:48:43
+ * @LastEditors: emmovo
+ * @LastEditTime: 2022-06-07 17:54:53
  * @FilePath: \V2.0\app\app.c
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -34,6 +34,8 @@
 
 #include "app.h"
 #include "ty_flash.h"
+
+#include "ty_adc.h"
 
 
 
@@ -102,13 +104,16 @@ void connection_show(void)
 	
 }
 
+ty_adc_t adc_p;
+
 uint16 app_task(uint8 task_id, uint16 events)
 {
 	
 		//=====test
-	
-		//WaitMs(1000);
-		
+
+		TY_PRINTF("adc: %d	%d	%d",adc_p.channel, adc_p.value, ty_adc_start(&adc_p));
+//		WaitMs(200);
+//		
 		//========
 		app();
 		return 1;
