@@ -1,13 +1,18 @@
 /*
- * @Author: emmovo mingjkl@live.com
- * @Date: 2022-06-04 12:38:27
+ * @Author: emmovo
+ * @Date: 2022-06-06 13:36:38
  * @LastEditors: emmovo
- * @LastEditTime: 2022-06-07 10:15:12
- * @FilePath: \V2.0\app\app.h
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @LastEditTime: 2022-06-12 14:10:57
+ * @FilePath: \skippingRope_phy6222\project\V2.0\app\app.h
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by mingjkl@live.com/emmovo.com, All Rights Reserved. 
  */
+
  
  #include "types.h"
+
+ #include "BT612_4_config.h"
 
  #include "app_timer.h"
  #include "timestamp.h"
@@ -15,6 +20,8 @@
  #include "main_logic.h"
  #include "app_btn.h"
  #include "app_bell.h"
+ #include "app_adc_btn.h"
+ #include "app_soc.h"
 
 
 uint16_t app_task(uint8_t task_id, uint16 events);

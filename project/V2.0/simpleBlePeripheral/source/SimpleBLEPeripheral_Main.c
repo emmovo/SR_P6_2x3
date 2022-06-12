@@ -96,9 +96,9 @@ int app_main(void)
 		hal_gpio_write(GPIO_P32, false);
 		hal_gpio_write(GPIO_P33, true);
 	
-		hal_gpio_pin_init(GPIO_P11, GPIO_OUTPUT);
-	
-		hal_gpio_write(GPIO_P11, false);
+//		hal_gpio_pin_init(GPIO_P11, GPIO_OUTPUT);
+//	
+//		hal_gpio_write(GPIO_P11, false);
 
 		hal_gpio_pin_init(GPIO_P25, GPIO_INPUT);
 	
@@ -108,7 +108,7 @@ int app_main(void)
 		{
 			hal_gpio_write(GPIO_P32, false);
 			WaitMs(200);
-			hal_gpio_write(GPIO_P32, true);
+			hal_gpio_write(GPIO_P32, true); 
 			WaitMs(200);
 		}
 	
