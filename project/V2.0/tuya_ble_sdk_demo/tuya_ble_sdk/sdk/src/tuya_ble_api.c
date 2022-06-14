@@ -38,6 +38,8 @@
 #include "tuya_ble_event.h"
 #include "tuya_ble_app_production_test.h"
 
+
+
 #if (TUYA_BLE_SECURE_CONNECTION_TYPE == TUYA_BLE_SECURE_CONNECTION_WITH_AUTH_KEY_ADVANCED_ENCRYPTION)
 #include "cJSON.h"
 #endif

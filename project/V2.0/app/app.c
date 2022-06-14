@@ -64,7 +64,7 @@ void app(void)
 
 
 // 	connection_show();
-// 	ble_app();
+ 	ble_app();
 // 	timestamp_update();
 	
 // 	extern bool ble_finish_dp_offline_exist;
@@ -112,9 +112,9 @@ uint16 app_task(uint8 task_id, uint16 events)
 		//=====test
 
 //		TY_PRINTF("adc:	%d", app_soc_ty_adc_value_get());
-		WaitMs(2000);
-	
-		app_seg_lcd_test();
+//		WaitMs(5);
+//	
+//		app_seg_lcd_test();
 //		
 		//========
 		app();
@@ -124,7 +124,7 @@ uint16 app_task(uint8 task_id, uint16 events)
 void app_task_init(uint8 task_id)
 {
 	
-		app_seg_lcd_init();
+//		app_seg_lcd_init();
 	
 		osal_set_event(task_id, 1);
 }

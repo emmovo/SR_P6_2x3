@@ -30,6 +30,8 @@
 #include "tuya_ble_internal_config.h"
 #include "tuya_ble_port.h"
 
+
+
 #if (TUYA_BLE_USE_OS==0)
 /**
  * @brief   Function for executing all enqueued tasks.
@@ -98,6 +100,7 @@ tuya_ble_status_t tuya_ble_device_update_mcu_version(uint32_t mcu_firmware_versi
 tuya_ble_status_t tuya_ble_sdk_init(tuya_ble_device_param_t * param_data);
 
 
+
 #if (TUYA_BLE_PROTOCOL_VERSION_HIGN==4) 
 
 /**
@@ -139,6 +142,7 @@ tuya_ble_status_t tuya_ble_dp_data_with_time_send(uint32_t sn,tuya_ble_dp_data_s
  * @note    
  *.
  * */
+
 
 tuya_ble_status_t tuya_ble_dp_data_report(uint8_t *p_data,uint32_t len); 
 

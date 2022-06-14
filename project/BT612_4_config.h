@@ -2,13 +2,16 @@
  * @Author: emmovo
  * @Date: 2022-06-12 13:55:11
  * @LastEditors: emmovo
- * @LastEditTime: 2022-06-12 15:09:01
+ * @LastEditTime: 2022-06-12 17:54:22
  * @FilePath: \skippingRope_phy6222\project\BT612_4_config.h
  * @Description: 
  * 
  * Copyright (c) 2022 by mingjkl@live.com/emmovo.com, All Rights Reserved. 
  */
 
+#ifdef BOARD_BT612_4
+
+//==========  SEG LCD PIN ==========
 
 #define SEG_LCD_PIN1    GPIO_P34
 #define SEG_LCD_PIN2    GPIO_P33
@@ -31,3 +34,11 @@
 #define SEG_LCD_COM5    GPIO_P20
 
 #define SEG_LCD_BACKLIGHT_PIN   GPIO_P01
+
+
+//==========  HALL PIN ==========
+
+#define HALL_1_PIN  GPIO_P00
+
+
+#endif

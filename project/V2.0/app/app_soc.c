@@ -2,7 +2,7 @@
  * @Author: emmovo
  * @Date: 2022-06-06 13:36:38
  * @LastEditors: emmovo
- * @LastEditTime: 2022-06-12 12:55:55
+ * @LastEditTime: 2022-06-14 16:50:35
  * @FilePath: \skippingRope_phy6222\project\V2.0\app\app_soc.c
  * @Description: 
  * 
@@ -166,6 +166,189 @@ uint32_t app_soc_ty_adc_value_get(void)
 		}
 }
 
+
+void battery_init(void)
+{
+	//chrg
+	// gpio_config(GPIOD_3, INPUT, PULL_HIGH);
+	
+	// //adc init
+	// adc_init(4, 1);
+	
+	// uint16_t temp = adc_get_value();
+	
+}
+
+uint8_t last_bat_level = 0;
+
+void battery_check(void)
+{
+	static uint32_t tick = 0;
+	static bool last_chrg = 0;
+	uint8_t digit = 0;
+	uint8_t ledseg_data[4] = { 0 };
+// 	if(gpio_get_input(GPIOD_3) == 0)
+// 	{
+// 		bool led_lit = 0;
+// 		last_chrg = 1;
+		
+// 		uint32_t lit_tick = 0;
+// 		led_set(1);
+// 		uint8_t offset = 0;
+// 		while (1)
+// 		{
+// 			uint16_t temp = adc_get_value();
+// 			memset(ledseg_data, 0, 4);
+			
+// 			if (temp < 220)
+// 			{
+// 				if (offset == 0)
+// 				{
+// 					offset = 0;
+// 				}
+// 			}
+// 			else if (temp < 235)
+// 			{
+// 				if (offset < 1)
+// 				{
+// 					offset = 1; 
+// 				}
+// 			}
+// 			else if (temp < 250)
+// 			{
+// 				if (offset < 2)
+// 				{
+// 					offset = 2; 
+// 				}
+// 			}
+// 			else
+// 			{
+// 				offset = 3;
+// 			}
+			
+// 			memset(ledseg_data, LEDS_LETTER_0, offset + 1);
+// 			if (led_lit == 0&&timer_get_systick() - lit_tick > 2000)
+// 			{
+// 				lit_tick = timer_get_systick();
+// 				led_lit = 1;
+// 				ledseg_write_display(ledseg_data);
+// 			}
+// 			else if (led_lit == 1&&timer_get_systick() - lit_tick > 2000)
+// 			{
+// 				ledseg_data[offset] = 0;
+// 				lit_tick = timer_get_systick();
+// 				led_lit = 0;
+// 				ledseg_write_display(ledseg_data);
+// 			}
+// 			if (gpio_get_input(GPIOD_3) == 1)
+// 			{
+// 				platform_reset(RESET_NO_ERROR);
+// 			}
+// 			bat_val = 4;
+// 			if (timer_get_systick() - ble_upload_ticks > 1200000)
+// 			{
+// 				ble_dp_return_bat(bat_val);
+// 				ble_upload_ticks = timer_get_systick();
+// 			}
+// 			rwip_schedule();
+// 			wdt_feed(0xffff);
+// 		}
+		
+// 	}	
+// 	//check battery
+// 	if(initial == false)
+// 	{
+// 		uint16_t temp = adc_get_value();
+		
+		
+		
+// 		if (temp < 168)	//2.688
+// 		{
+// 			vibrator_set(1);
+// 			led_set(1);
+// 			Delay_ms(2000);
+// 			vibrator_set(0);
+// 			led_set(0);
+// 			power_off();
+// 		}
+// 		else if (temp < 230)	//3.68
+// 		{
+// 			bat_val = 0;
+// 			ble_uploaded = 0;
+// 		}
+// 		else if(temp < 240)	//3.84
+// 		{
+// 			bat_val = 1;
+// 			ble_uploaded = 0;
+// 		}
+// 		else
+// 		{
+// 			bat_val = 2;
+// 			ble_uploaded = 0;
+// 		}
+// 		if (!ble_uploaded)
+// 		{
+// 			last_bat_level = bat_val;
+// 			ble_dp_return_bat(bat_val);
+// 			ble_uploaded = 1;
+// 		}
+		
+// 		tick = timer_get_systick();
+// 		initial = true;
+// 	}
+	
+	
+		
+		
+// 	if(timer_get_systick() - tick > 20000)
+// 	{
+		
+		
+// 		uint16_t temp = adc_get_value();
+		
+// //		UART_PRINTF("bat %d\r\n", temp);
+		
+// 		if (temp < 168)		//3.1
+// 		{
+// 			vibrator_set(1);
+// 			led_set(1);
+// 			Delay_ms(2000);
+// 			vibrator_set(0);
+// 			led_set(0);
+// 			power_off();
+			
+// 		}
+// 		else if (temp < 0xcf)		//3.3
+// 		{
+// 			bat_val = 0;
+// 			ble_uploaded = 0;
+// 		}
+// 		else if(temp < 0xf0)		//3.84
+// 		{
+// 			bat_val = 1;
+// 			ble_uploaded = 0;
+// 		}
+// 		else
+// 		{
+// 			bat_val = 2;
+// 			ble_uploaded = 0;
+// 		}
+// 		if (last_bat_level != bat_val)
+// 		{
+// 			ble_dp_return_bat(bat_val);
+// 			last_bat_level = bat_val;
+// 			ble_uploaded = 1;
+// 		}
+		
+// 		tick = timer_get_systick();
+// 	}
+}
+
+void Battery_Upload_BLE(void)
+{
+		ble_dp_return_bat(100);	//test;
+//	ble_dp_return_bat(bat_val);
+}
 
 
 

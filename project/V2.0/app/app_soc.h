@@ -14,3 +14,9 @@
 
 uint32_t app_soc_ty_adc_start(ty_adc_t* p_adc);
 uint32_t app_soc_ty_adc_value_get(void);
+
+void battery_init(void);
+void battery_check(void);
+
+void Battery_Upload_BLE(void);
+

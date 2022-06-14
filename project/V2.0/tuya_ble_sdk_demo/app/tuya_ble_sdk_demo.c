@@ -11,6 +11,8 @@
 #include "tuya_ble_feature_weather.h"
 #include "tuya_ble_bulk_data_demo.h"
 
+#include "app.h"
+
 
 
 
@@ -50,6 +52,8 @@ tuya_ble_app_master_result_handler_t tuya_ble_app_master_result_handler;
 demo_dp_t g_cmd;
 demo_dp_t g_rsp;
 
+extern bool connection_status;
+
 /*********************************************************************
  * LOCAL FUNCTION
  */
@@ -75,13 +79,31 @@ static void tuya_ble_sdk_callback(tuya_ble_cb_evt_param_t* event)
                 TUYA_APP_LOG_INFO("bonding and connecting");
                 
                 tuya_ble_update_conn_param_timer_start();
+							
+								
             }
+						
+						if (event->connect_status == 3)
+						{
+							connection_status = 1;
+
+							battery_check();
+							Battery_Upload_BLE();
+						
+						}
+						else
+						{
+							connection_status = 0;
+						}
+						
         } break;
         
         case TUYA_BLE_CB_EVT_DP_DATA_RECEIVED: {
 #if TUYA_BLE_SDK_TEST
             tuya_ble_sdk_test_send(TY_UARTV_CMD_DP_WRITE, event->dp_received_data.p_data, event->dp_received_data.data_len);
 #endif
+					ble_receive_dp(event->dp_received_data.p_data, event->dp_received_data.data_len);
+					
         } break;
         
         case TUYA_BLE_CB_EVT_DP_DATA_SEND_RESPONSE: {
