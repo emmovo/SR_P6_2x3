@@ -681,7 +681,7 @@ mtp_ret data_2_klvlist(uint8_t *data,uint32_t len,klv_node_s **list,uint8_t type
     //The data is parsed into a list of dp points  dpid+dp_tp+len+data
     if(NULL == data || NULL == list)
     {
-        TY_PRINTF("!!!!!!");
+        
         return MTP_INVALID_PARAM;
     }
 
@@ -696,6 +696,8 @@ mtp_ret data_2_klvlist(uint8_t *data,uint32_t len,klv_node_s **list,uint8_t type
             if((len-offset) < 4)
             {
                 free_klv_list(klv_list);
+
+
                 return MTP_COM_ERROR;
             }
         }
@@ -703,6 +705,7 @@ mtp_ret data_2_klvlist(uint8_t *data,uint32_t len,klv_node_s **list,uint8_t type
         {
             if((len-offset) < 3)
             {
+
                 free_klv_list(klv_list);
                 return MTP_COM_ERROR;
             }
@@ -752,6 +755,8 @@ mtp_ret data_2_klvlist(uint8_t *data,uint32_t len,klv_node_s **list,uint8_t type
             tuya_ble_free(node->data);
             tuya_ble_free((uint8_t*)node);
             free_klv_list(klv_list);
+
+
             return MTP_COM_ERROR;
         }
         if(node->len>0)
@@ -765,6 +770,7 @@ mtp_ret data_2_klvlist(uint8_t *data,uint32_t len,klv_node_s **list,uint8_t type
 
     if(NULL == klv_list)
     {
+
         return MTP_COM_ERROR;
     }
     *list = klv_list;

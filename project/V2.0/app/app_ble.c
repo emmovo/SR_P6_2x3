@@ -278,10 +278,11 @@ void ble_dp_return_mode(uint8_t mode)
 	{
 		return;
 	}
-	uint8_t temp_dp[4] =
+	uint8_t temp_dp[5] =
 	{
 		3,
 		4,
+		0,
 		1,
 		mode,
 	};
@@ -306,7 +307,7 @@ void ble_dp_return_mode(uint8_t mode)
 	}
 	
 	#endif
-	tuya_ble_dp_data_report(temp_dp, 4);
+	tuya_ble_dp_data_report(temp_dp, 5);
 }
 
 bool ble_finish_dp_offline_exist = false;
@@ -392,15 +393,16 @@ void ble_dp_return_target_time(uint16_t time)
 	{
 		return;
 	}
-	uint8_t temp_dp[5] =
+	uint8_t temp_dp[6] =
 	{
 		14,
 		2,
+		0,
 		2,
 		time>>8,
 		time
 	};
-	tuya_ble_dp_data_report(temp_dp, 5);
+	tuya_ble_dp_data_report(temp_dp, 6);
 }
 void ble_dp_return_target_cnt(uint16_t cnt)
 {
