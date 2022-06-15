@@ -28,12 +28,31 @@ uint32_t ble_dp_data_sn = 0;
 
 tuya_ble_status_t tuya_ble_dp_data_report(uint8_t *p_data,uint32_t len)
 {
-		return tuya_ble_dp_data_send(ble_dp_data_sn++, 
+		// return tuya_ble_dp_data_send(ble_dp_data_sn++, 
+		// 							DP_SEND_TYPE_ACTIVE,
+		// 							DP_SEND_FOR_CLOUD_PANEL,
+		// 							DP_SEND_WITHOUT_RESPONSE,
+		// 							p_data,
+		// 							len);
+
+		tuya_ble_status_t err = 0;
+
+		 err = tuya_ble_dp_data_send(ble_dp_data_sn++, 
 									DP_SEND_TYPE_ACTIVE,
 									DP_SEND_FOR_CLOUD_PANEL,
 									DP_SEND_WITHOUT_RESPONSE,
 									p_data,
 									len);
+	
+		uint8_t p = 0;
+		for(p = 0; p < len; p++)
+		{
+				TY_PRINTF("%d", p_data[p]);
+		}
+
+		TY_PRINTF("send err: %d", err);
+
+		return err;
 }
 
 tuya_ble_status_t tuya_ble_dp_data_with_time_report(uint32_t timestamp,uint8_t *p_data,uint32_t len)

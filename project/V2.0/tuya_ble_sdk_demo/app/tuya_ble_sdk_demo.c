@@ -89,6 +89,12 @@ static void tuya_ble_sdk_callback(tuya_ble_cb_evt_param_t* event)
 
 							battery_check();
 							Battery_Upload_BLE();
+
+                            TY_PRINTF("CONNECTED");
+
+                            // ble_dp_return_mode(2);
+                            // ble_dp_return_start();
+
 						
 						}
 						else

@@ -613,6 +613,7 @@ tuya_ble_status_t tuya_ble_dp_data_send(uint32_t sn,tuya_ble_dp_data_send_type_t
     ret = data_2_klvlist(p_dp_data,dp_data_len,&list,1);
     if(MTP_OK != ret)
     {
+        TY_PRINTF("!!!%d", ret);
         return TUYA_BLE_ERR_INVALID_PARAM;
     }
     free_klv_list(list);

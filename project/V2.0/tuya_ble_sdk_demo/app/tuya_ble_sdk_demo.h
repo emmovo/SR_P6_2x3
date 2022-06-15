@@ -35,7 +35,9 @@ extern "C"
 	
 //#define TY_DEVICE_PID         "2ewvra2e" //"suq5jmo5"(nRF52832) "p7ncbdgh"(watch) "2ewvra2e"(PHY6222)
 	
-#define TY_DEVICE_PID         "uficjten"
+// #define TY_DEVICE_PID         "uficjten"
+
+#define TY_DEVICE_PID         "6oorluwf"
 
 #define TY_DEVICE_MAC         "DC234D12ED2E"
 #define TY_DEVICE_DID         "tuyaf3752699e2cd" //16Bytes

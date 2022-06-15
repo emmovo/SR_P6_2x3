@@ -10,8 +10,7 @@
 //#include "hall.h"
 //#include "uart.h"
 //#include "leds.h"
-//#include "tuya_ble_api.h"
-//#include "ble.h"
+#include "tuya_ble_api.h"
 //#include "gpio.h"
 //#include "vibrator.h"
 //#include "tuya_ble_api.h"
@@ -49,7 +48,7 @@ uint32_t led_sleep_tick_count = 0;
 bool ble_reset = false;
 uint32_t ble_reset_power_off_tick = 0;
 
-//extern tuya_ble_device_param_t device_param;
+extern tuya_ble_device_param_t device_param;
 extern bool connection_status;
 
 void mode_param_init(void)
@@ -63,15 +62,15 @@ void mode_param_init(void)
 		mode_param.sec_hall_count = 0;
 }
 
-//int main_logic_pwr_btn(void)
-//{
-//	return !gpio_get_input(GPIOB_7);
-//}
+int main_logic_pwr_btn(void)
+{
+	return !hal_gpio_read(GPIO_P14);
+}
 
-//int main_logic_set_btn(void)
-//{
-//	return !gpio_get_input(GPIOB_2);
-//}
+int main_logic_set_btn(void)
+{
+	return !hal_gpio_read(GPIO_P15);
+}
 
 void main_logic_ready_to_working(void)
 {
@@ -160,8 +159,8 @@ void main_logic(void)
 						{
 							main_logic_mode = mode_0_ready;
 							// main_logic_vibrator_set(500, 300, 1);
-							// ble_dp_return_start();
-							// ble_dp_return_pause(0);
+							ble_dp_return_start();
+							ble_dp_return_pause(0);
 						}
 						else
 						{
@@ -199,8 +198,8 @@ void main_logic(void)
 				}
 				else if(main_logic_mode == mode_1_level_select)
 				{
-						// main_logic_target_time_set(target_time_level[mode_param.target_time_level_pointer] * 60);
-						// ble_dp_return_target_time(target_time_level[mode_param.target_time_level_pointer] * 60);
+						main_logic_target_time_set(target_time_level[mode_param.target_time_level_pointer] * 60);
+						ble_dp_return_target_time(target_time_level[mode_param.target_time_level_pointer] * 60);
 					
 						if(mode_param.target_time_level_pointer > 5)
 						{
@@ -212,15 +211,15 @@ void main_logic(void)
 								mode_param.target_time_level_pointer++;
 						}
 						level_select_to_ready_tick_clear();
-//						
+						
 				}
-//				
+				
 				else if(main_logic_mode == mode_2_level_select)
 				{
-//						
-//						main_logic_target_count_set(target_count_level[mode_param.target_count_level_pointer] * 100);
-//						ble_dp_return_target_cnt(target_count_level[mode_param.target_count_level_pointer] * 100);
-//					
+						
+						main_logic_target_count_set(target_count_level[mode_param.target_count_level_pointer] * 100);
+						ble_dp_return_target_cnt(target_count_level[mode_param.target_count_level_pointer] * 100);
+					
 						if(mode_param.target_count_level_pointer > 5)
 						{
 								mode_param.target_count_level_pointer = 0;	
@@ -230,7 +229,7 @@ void main_logic(void)
 								mode_param.target_count_level_pointer++;
 						}
 						level_select_to_ready_tick_clear();
-//					
+					
 				}
 				else if(main_logic_mode == mode_main_idle)
 				{
@@ -239,35 +238,35 @@ void main_logic(void)
 				}
 
 //				led_sleep_tick_clear();
-//				
+				
 				key_scan_param.pwr_btn_mode = idle;
 		}
-//		
-//		if(key_scan_param.pwr_btn_mode == double_click)
-//		{
-//				//uart_printf("pwr double\r\n");
-//				
-//				main_logic_mode_end();
-//				
-//				key_scan_param.pwr_btn_mode = idle;
-//			
-//				led_sleep_tick_clear();
-//		}
-//		
-//		if(key_scan_param.pwr_btn_mode == long_press)
-//		{
-////				uart_printf("pwr long\r\n");
-//				led_sleep_tick_clear();
-//				key_scan_param.pwr_btn_mode = idle;
-//			
-////				if(main_sleep_tick_count > 3000)
-////				{
-////						main_sleep_tick_count = 49100;
-////				}
-//				
-//		}
+		
+		if(key_scan_param.pwr_btn_mode == double_click)
+		{
+				//uart_printf("pwr double\r\n");
+				
+				main_logic_mode_end();
+				
+				key_scan_param.pwr_btn_mode = idle;
+			
+				// led_sleep_tick_clear();
+		}
+		
+		if(key_scan_param.pwr_btn_mode == long_press)
+		{
+//				uart_printf("pwr long\r\n");
+				// led_sleep_tick_clear();
+				key_scan_param.pwr_btn_mode = idle;
+			
+				if(main_sleep_tick_count > 3000)
+				{
+						main_sleep_tick_count = 49100;
+				}
+				
+		}
 ////		uart_printf("%d\r\n",main_sleep_tick_count);
-//		
+		
 		if(key_scan_param.set_btn_mode == single_click)
 		{
 //				//uart_printf("set single\r\n");
@@ -287,14 +286,14 @@ void main_logic(void)
 						main_logic_mode = mode_2_idle;
 //						led_sleep_tick_clear();
 				}
-//				
+				
 				// led_sleep_tick_clear();
 				key_scan_param.set_btn_mode = idle;
 		}
-//		
-//		if(key_scan_param.set_btn_mode == double_click)
-//		{
-//			
+		
+		if(key_scan_param.set_btn_mode == double_click)
+		{
+			
 //				//=============================
 //			
 //				//uart_printf("set double\r\n");
@@ -316,60 +315,60 @@ void main_logic(void)
 //				//uart_printf("\r\n");
 //				
 //				//=============================
-//				
-//				if(main_logic_mode == mode_main_idle)
-//				{
-//						ble_dp_return_mode(1);
-//						main_logic_mode = mode_1_idle;
-//				}
-//				else if(main_logic_mode == mode_0_idle)
-//				{
-//						ble_dp_return_mode(1);
-//						main_logic_mode = mode_1_idle;
-//				}
-//				else if((main_logic_mode == mode_1_idle)||(main_logic_mode == mode_1_level_select))
-//				{
-//						ble_dp_return_mode(2);
-//						main_logic_mode = mode_2_idle;
-//				}
-//				else if((main_logic_mode == mode_2_idle)||(main_logic_mode == mode_2_level_select))
-//				{
-//						ble_dp_return_mode(0);
-//						main_logic_mode = mode_0_idle;
-//				}
-//				else if((main_logic_mode == mode_0_pause)||(main_logic_mode == mode_0_working)||(main_logic_mode == mode_0_ready))
-//				{
-//						main_logic_mode_end();
-//						ble_dp_return_mode(1);
-//						main_logic_mode = mode_1_idle;
-//				}
-//				else if((main_logic_mode == mode_1_pause)||(main_logic_mode == mode_1_working)||(main_logic_mode == mode_1_ready))
-//				{
-//						main_logic_mode_end();
-//						ble_dp_return_mode(2);
-//						main_logic_mode = mode_2_idle;
-//				}
-//				else if((main_logic_mode == mode_2_pause)||(main_logic_mode == mode_2_working)||(main_logic_mode == mode_2_ready))
-//				{
-//						main_logic_mode_end();
-//						ble_dp_return_mode(0);
-//						main_logic_mode = mode_0_idle;
-//				}
-//				
-//				mode_param.led_sleep_tick = 0;
-//				mode_param.led_sleep = 0;
-//				
+				
+				if(main_logic_mode == mode_main_idle)
+				{
+						ble_dp_return_mode(1);
+						main_logic_mode = mode_1_idle;
+				}
+				else if(main_logic_mode == mode_0_idle)
+				{
+						ble_dp_return_mode(1);
+						main_logic_mode = mode_1_idle;
+				}
+				else if((main_logic_mode == mode_1_idle)||(main_logic_mode == mode_1_level_select))
+				{
+						ble_dp_return_mode(2);
+						main_logic_mode = mode_2_idle;
+				}
+				else if((main_logic_mode == mode_2_idle)||(main_logic_mode == mode_2_level_select))
+				{
+						ble_dp_return_mode(0);
+						main_logic_mode = mode_0_idle;
+				}
+				else if((main_logic_mode == mode_0_pause)||(main_logic_mode == mode_0_working)||(main_logic_mode == mode_0_ready))
+				{
+						main_logic_mode_end();
+						ble_dp_return_mode(1);
+						main_logic_mode = mode_1_idle;
+				}
+				else if((main_logic_mode == mode_1_pause)||(main_logic_mode == mode_1_working)||(main_logic_mode == mode_1_ready))
+				{
+						main_logic_mode_end();
+						ble_dp_return_mode(2);
+						main_logic_mode = mode_2_idle;
+				}
+				else if((main_logic_mode == mode_2_pause)||(main_logic_mode == mode_2_working)||(main_logic_mode == mode_2_ready))
+				{
+						main_logic_mode_end();
+						ble_dp_return_mode(0);
+						main_logic_mode = mode_0_idle;
+				}
+				
+				mode_param.led_sleep_tick = 0;
+				mode_param.led_sleep = 0;
+				
 //				led_sleep_tick_clear();
-//				key_scan_param.set_btn_mode = idle;
-//		}
-//		
-//		if(key_scan_param.set_btn_mode == long_press)
-//		{
+				key_scan_param.set_btn_mode = idle;
+		}
+		
+		if(key_scan_param.set_btn_mode == long_press)
+		{
 //				//uart_printf("set long\r\n");
 //				led_sleep_tick_clear();
-//				key_scan_param.set_btn_mode = idle;
-//		}
-//		
+				key_scan_param.set_btn_mode = idle;
+		}
+		
 ////		uart_printf("mode %d\r\n",main_logic_mode);
 
 		switch(main_logic_mode)
@@ -399,13 +398,13 @@ void main_logic(void)
 				{
 						mode_param_init();
 					
-//						ble_dp_return_mode(0);
-//					
+						ble_dp_return_mode(0);
+					
 //						main_logic_vibrator_set(500, 50, 1);
-//						ble_dp_return_rt_data(0, 0, 0);
-//						ble_dp_return_pause(0);
-//						ble_dp_return_start();
-//					
+						ble_dp_return_rt_data(0, 0, 0);
+						ble_dp_return_pause(0);
+						ble_dp_return_start();
+					
 						main_logic_mode = mode_0_working;
 					
 				}
@@ -461,19 +460,19 @@ void main_logic(void)
 				{
 //						ledseg_off();
 				}
-//				
+				
 				if(hall_get_cycle())
 				{
 						main_logic_ready_to_working();
 				}
 				break;
-			// case mode_0_working:
+			case mode_0_working:
 				
 				if(hall_get_cycle())
 				{
 						mode_param.cyc_count++;
-////						ble_dp_return_rt_data(mode_param.cyc_count, mode_param.time / 164, calorie_cal_main_logic(mode_param.cyc_count, mode_param.time /164));
-//						ble_dp_return_rt_data_no_time(mode_param.cyc_count,calorie_cal_main_logic(mode_param.cyc_count, mode_param.time / 164));
+
+						ble_dp_return_rt_data_no_time(mode_param.cyc_count,calorie_cal_main_logic(mode_param.cyc_count, mode_param.time / 164));
 //						//uart_printf("%d\r\n",hall_cyc);
 				}
 //				ledseg_show_digits_blinky_once(mode_param.cyc_count, 300);
@@ -491,8 +490,8 @@ void main_logic(void)
 //			
 			case mode_1_idle:
 //				//uart_printf("mode_1_idle\r\n");	
-//				
-//			
+				
+			
 				if(mode_param.led_sleep_tick < LED_SLEEP_TICK_TIME)
 				{
 						mode_param.led_sleep_tick++;
@@ -509,17 +508,17 @@ void main_logic(void)
 				{
 //						ledseg_off();
 				}
-//				
+				
 				break;
-//			
+			
 			case mode_1_level_select:
 //				ledseg_show_time_blinky(mode_param.target_time / 60, mode_param.target_time % 60);
 				break;
-//			
+			
 			case mode_1_ready:
 //				//uart_printf("mode_1_ready\r\n");
 ////				ledseg_show_time_blinky(mode_param.target_time / 60, mode_param.target_time % 60);
-//			
+			
 				if(mode_param.led_sleep_tick < LED_SLEEP_TICK_TIME)
 				{
 						mode_param.led_sleep_tick++;
@@ -548,15 +547,15 @@ void main_logic(void)
 				if(hall_get_cycle())
 				{
 						mode_param.cyc_count++;
-////						ble_dp_return_rt_data(mode_param.cyc_count, mode_param.time / 164, calorie_cal_main_logic(mode_param.cyc_count, mode_param.time / 164));
-//						ble_dp_return_rt_data_no_time(mode_param.cyc_count,calorie_cal_main_logic(mode_param.cyc_count, mode_param.time / 164));
+
+						ble_dp_return_rt_data_no_time(mode_param.cyc_count,calorie_cal_main_logic(mode_param.cyc_count, mode_param.time / 164));
 //						//uart_printf("%d\r\n", mode_param.cyc_count);
 				}
 //				ledseg_show_digits_blinky_once(mode_param.cyc_count, 300);
 //				
 				if(mode_param.time / 164 > mode_param.target_time)
 				{
-						// main_logic_mode_end();
+						main_logic_mode_end();
 				}
 				break;
 //				
@@ -630,8 +629,8 @@ void main_logic(void)
 				{
 						mode_param.cyc_count++;
 					
-////					ble_dp_return_rt_data(mode_param.cyc_count, mode_param.time / 164, calorie_cal_main_logic(mode_param.cyc_count, mode_param.time / 164));
-//					ble_dp_return_rt_data_no_time(mode_param.cyc_count,calorie_cal_main_logic(mode_param.cyc_count, mode_param.time / 164));
+
+					ble_dp_return_rt_data_no_time(mode_param.cyc_count,calorie_cal_main_logic(mode_param.cyc_count, mode_param.time / 164));
 					
 					if(mode_param.cyc_count == mode_param.target_count)
 					{
@@ -655,7 +654,7 @@ void main_logic(void)
 				{
 						//uart_printf("mode_2_end\r\n");
 						mode_2_end_report_delay = 0;
-//						main_logic_mode_end();
+						main_logic_mode_end();
 				}
 				
 				break;
@@ -702,212 +701,212 @@ void main_logic_mode_set(enum mode_e mode)
 		
 }
 
-//void main_logic_mode_start(void)
-//{
-//		mode_param_init();
-//	
-//		if(main_logic_mode == mode_0_idle)
-//		{
-//				tuya_ble_time_req(0);
+void main_logic_mode_start(void)
+{
+		mode_param_init();
+	
+		if(main_logic_mode == mode_0_idle)
+		{
+				tuya_ble_time_req(0);
 //				main_logic_vibrator_set(500, 50, 1);
-//				ble_dp_return_rt_data(0, 0, 0);
-//				main_logic_mode = mode_0_ready;
-//				
-//				ble_dp_return_pause(0);
-//				ble_dp_return_start();
-//				
-//		}
-//		
-//		if(main_logic_mode == mode_1_idle)
-//		{
-//				tuya_ble_time_req(0);
+				ble_dp_return_rt_data(0, 0, 0);
+				main_logic_mode = mode_0_ready;
+				
+				ble_dp_return_pause(0);
+				ble_dp_return_start();
+				
+		}
+		
+		if(main_logic_mode == mode_1_idle)
+		{
+				tuya_ble_time_req(0);
 //				main_logic_vibrator_set(500, 50, 1);
-//				ble_dp_return_rt_data(0, 0, 0);
-//				main_logic_mode = mode_1_ready;
-//			
-//				ble_dp_return_pause(0);
-//				ble_dp_return_start();
-//				
-//		}
-//		
-//		if(main_logic_mode == mode_2_idle)
-//		{
-//				tuya_ble_time_req(0);
+				ble_dp_return_rt_data(0, 0, 0);
+				main_logic_mode = mode_1_ready;
+			
+				ble_dp_return_pause(0);
+				ble_dp_return_start();
+				
+		}
+		
+		if(main_logic_mode == mode_2_idle)
+		{
+				tuya_ble_time_req(0);
 //				main_logic_vibrator_set(500, 50, 1);
-//				ble_dp_return_rt_data(0, 0, 0);
-//				main_logic_mode = mode_2_ready;
-//			
-//				ble_dp_return_pause(0);
-//				ble_dp_return_start();
-//				
-//		}
-//}
+				ble_dp_return_rt_data(0, 0, 0);
+				main_logic_mode = mode_2_ready;
+			
+				ble_dp_return_pause(0);
+				ble_dp_return_start();
+				
+		}
+}
 
-//void main_logic_mode_end(void)
-//{
-//		if((main_logic_mode == mode_0_working)||(main_logic_mode == mode_0_pause)||(main_logic_mode == mode_0_ready))
-//		{
-//				main_logic_mode = mode_0_idle;
-//				ble_dp_return_finish(0, mode_param.cyc_count, mode_param.time / 164, calorie_cal_main_logic(mode_param.cyc_count, mode_param.time /164));
-////				ble_dp_return_stop();
-//				ble_dp_return_rt_data(0, 0, 0);
+void main_logic_mode_end(void)
+{
+		if((main_logic_mode == mode_0_working)||(main_logic_mode == mode_0_pause)||(main_logic_mode == mode_0_ready))
+		{
+				main_logic_mode = mode_0_idle;
+				ble_dp_return_finish(0, mode_param.cyc_count, mode_param.time / 164, calorie_cal_main_logic(mode_param.cyc_count, mode_param.time /164));
+
+				ble_dp_return_rt_data(0, 0, 0);
+//				ledseg_show_digits(mode_param.cyc_count);
+				// main_logic_vibrator_set(500, 300, 3);
+				
+		}
+		
+		if((main_logic_mode == mode_1_working)||(main_logic_mode == mode_1_pause)||(main_logic_mode == mode_1_ready))
+		{
+				main_logic_mode = mode_1_idle;
+				if(mode_param.time / 164 > mode_param.target_time) mode_param.time = mode_param.target_time * 164;
+				ble_dp_return_finish(1, mode_param.cyc_count, mode_param.time / 164, calorie_cal_main_logic(mode_param.cyc_count, mode_param.time / 164));
+
 //				ledseg_show_digits(mode_param.cyc_count);
 //				main_logic_vibrator_set(500, 300, 3);
-//				
-//		}
-//		
-//		if((main_logic_mode == mode_1_working)||(main_logic_mode == mode_1_pause)||(main_logic_mode == mode_1_ready))
-//		{
-//				main_logic_mode = mode_1_idle;
-//				if(mode_param.time / 164 > mode_param.target_time) mode_param.time = mode_param.target_time * 164;
-//				ble_dp_return_finish(1, mode_param.cyc_count, mode_param.time / 164, calorie_cal_main_logic(mode_param.cyc_count, mode_param.time / 164));
-////				ble_dp_return_stop();
+				ble_dp_return_rt_data(0, 0, 0);
+				
+		}
+		
+		if((main_logic_mode == mode_2_working)||(main_logic_mode == mode_2_pause)||(main_logic_mode == mode_2_ready)||(main_logic_mode == mode_2_end))
+		{
+				main_logic_mode = mode_2_idle;
+				if(mode_param.cyc_count > mode_param.target_count) mode_param.cyc_count = mode_param.target_count;
+				ble_dp_return_finish(2, mode_param.cyc_count, mode_param.time / 164, calorie_cal_main_logic(mode_param.cyc_count, mode_param.time / 164));
+
 //				ledseg_show_digits(mode_param.cyc_count);
 //				main_logic_vibrator_set(500, 300, 3);
-//				ble_dp_return_rt_data(0, 0, 0);
-//				
-//		}
+				ble_dp_return_rt_data(0, 0, 0);
+				
+		}
 //		
-//		if((main_logic_mode == mode_2_working)||(main_logic_mode == mode_2_pause)||(main_logic_mode == mode_2_ready)||(main_logic_mode == mode_2_end))
-//		{
-//				main_logic_mode = mode_2_idle;
-//				if(mode_param.cyc_count > mode_param.target_count) mode_param.cyc_count = mode_param.target_count;
-//				ble_dp_return_finish(2, mode_param.cyc_count, mode_param.time / 164, calorie_cal_main_logic(mode_param.cyc_count, mode_param.time / 164));
-////				ble_dp_return_stop();
-//				ledseg_show_digits(mode_param.cyc_count);
-//				main_logic_vibrator_set(500, 300, 3);
-//				ble_dp_return_rt_data(0, 0, 0);
+		if(main_logic_mode == mode_main_idle)
+		{
+				main_logic_mode = mode_main_idle;
+				ble_dp_return_finish(0, 0, 0, 0);
+
 //				
-//		}
-//		
-//		if(main_logic_mode == mode_main_idle)
-//		{
-//				main_logic_mode = mode_main_idle;
-//				ble_dp_return_finish(0, 0, 0, 0);
-////				ble_dp_return_stop();
-//				
-//		}
+		}
 //		led_sleep_tick_clear();
-//		mode_param.led_sleep_tick = 0;
-//		mode_param.led_sleep = 0;
-//		mode_param_init();
-//}
+		mode_param.led_sleep_tick = 0;
+		mode_param.led_sleep = 0;
+		mode_param_init();
+}
 
-//void main_logic_mode_pause(void)
-//{
-//		if(main_logic_mode == mode_0_working)
-//		{
-//				main_logic_mode = mode_0_pause;
-//				ble_dp_return_pause(1);
-//		}
-//		
-//		if(main_logic_mode == mode_1_working)
-//		{
-//				main_logic_mode = mode_1_pause;
-//				ble_dp_return_pause(1);
-//		}
-//		
-//		if(main_logic_mode == mode_2_working)
-//		{
-//				main_logic_mode = mode_2_pause;
-//				ble_dp_return_pause(1);
-//		}
-//		
-//		if(main_logic_mode == mode_main_idle)
-//		{
-//				ble_dp_return_finish(0, 0, 0, 0);
-//				ble_dp_return_stop();
-//				main_logic_mode = mode_main_idle;
-//		}
-//}
+void main_logic_mode_pause(void)
+{
+		if(main_logic_mode == mode_0_working)
+		{
+				main_logic_mode = mode_0_pause;
+				ble_dp_return_pause(1);
+		}
+		
+		if(main_logic_mode == mode_1_working)
+		{
+				main_logic_mode = mode_1_pause;
+				ble_dp_return_pause(1);
+		}
+		
+		if(main_logic_mode == mode_2_working)
+		{
+				main_logic_mode = mode_2_pause;
+				ble_dp_return_pause(1);
+		}
+		
+		if(main_logic_mode == mode_main_idle)
+		{
+				ble_dp_return_finish(0, 0, 0, 0);
+				ble_dp_return_stop();
+				main_logic_mode = mode_main_idle;
+		}
+}
 
-//void main_logic_mode_continue(void)
-//{
-//		if(main_logic_mode == mode_0_pause)
-//		{
-//				main_logic_mode = mode_0_working;
-//				ble_dp_return_pause(0);
-//		}
-//		
-//		if(main_logic_mode == mode_1_pause)
-//		{
-//				main_logic_mode = mode_1_working;
-//				ble_dp_return_pause(0);
-//		}
-//		
-//		if(main_logic_mode == mode_2_pause)
-//		{
-//				main_logic_mode = mode_2_working;
-//				ble_dp_return_pause(0);
-//		}
-//		
-//}
+void main_logic_mode_continue(void)
+{
+		if(main_logic_mode == mode_0_pause)
+		{
+				main_logic_mode = mode_0_working;
+				ble_dp_return_pause(0);
+		}
+		
+		if(main_logic_mode == mode_1_pause)
+		{
+				main_logic_mode = mode_1_working;
+				ble_dp_return_pause(0);
+		}
+		
+		if(main_logic_mode == mode_2_pause)
+		{
+				main_logic_mode = mode_2_working;
+				ble_dp_return_pause(0);
+		}
+		
+}
 
-//extern uint32_t common_weight;
+extern uint32_t common_weight;
 
-//uint16_t calorie_cal_main_logic(uint16_t count, uint32_t second)
-//{
-//	uint8_t met_time = count / second;
-//	uint8_t met = 0;
-//	if (met_time < 1)
-//	{
-//		met = 7;
-//	}
-//	else if (met_time < 3)
-//	{
-//		met = 9;
-//	}
-//	else
-//	{
-//		met = 10;
-//	}
-//	uint16_t calorie = (met*common_weight * 3.5*count) / 20000;
-//	
-//	return calorie;
-//	
-//	
-//}
+uint16_t calorie_cal_main_logic(uint16_t count, uint32_t second)
+{
+	uint8_t met_time = count / second;
+	uint8_t met = 0;
+	if (met_time < 1)
+	{
+		met = 7;
+	}
+	else if (met_time < 3)
+	{
+		met = 9;
+	}
+	else
+	{
+		met = 10;
+	}
+	uint16_t calorie = (met*common_weight * 3.5*count) / 20000;
+	
+	return calorie;
+	
+	
+}
 
 
-//void main_logic_key_scan(void)
-//{
+void main_logic_key_scan(void)
+{
 
-//		if(main_logic_pwr_btn() == 1)
-//		{
-//				if(key_scan_param.pwr_btn_last_status == 0)
-//				{
-//						key_scan_param.pwr_btn_on_time = 0;
-//				}
-//				key_scan_param.pwr_btn_on_time++;
-//				
-//				if(key_scan_param.pwr_btn_on_time > LONG_PRESS_TIME)
-//				{
-//						key_scan_param.pwr_btn_mode = long_press;
-//				}
-//				key_scan_param.pwr_btn_last_status = 1;
-//				
+		if(main_logic_pwr_btn() == 1)
+		{
+				if(key_scan_param.pwr_btn_last_status == 0)
+				{
+						key_scan_param.pwr_btn_on_time = 0;
+				}
+				key_scan_param.pwr_btn_on_time++;
+				
+				if(key_scan_param.pwr_btn_on_time > LONG_PRESS_TIME)
+				{
+						key_scan_param.pwr_btn_mode = long_press;
+				}
+				key_scan_param.pwr_btn_last_status = 1;
+				
 //				main_sleep_tick_clear();
 //				led_sleep_tick_clear();
-//				
-//				
-//		}
-//		else
-//		{
-//				if(key_scan_param.pwr_btn_last_status == 1)
-//				{
-//					
-//						if(key_scan_param.pwr_btn_mode == pre_single_click)
-//						{
-//								key_scan_param.pwr_btn_mode = double_click;
-//								key_scan_param.pwr_btn_off_time = 0;
-//						}
-//						if(key_scan_param.pwr_btn_mode == idle)
-//						{
-//								key_scan_param.pwr_btn_mode = pre_single_click;
-//						}
-//						
-//						
-//						
+				
+				
+		}
+		else
+		{
+				if(key_scan_param.pwr_btn_last_status == 1)
+				{
+					
+						if(key_scan_param.pwr_btn_mode == pre_single_click)
+						{
+								key_scan_param.pwr_btn_mode = double_click;
+								key_scan_param.pwr_btn_off_time = 0;
+						}
+						if(key_scan_param.pwr_btn_mode == idle)
+						{
+								key_scan_param.pwr_btn_mode = pre_single_click;
+						}
+						
+						
+						
 //#ifdef Non_intelligent_version
 //						
 ////						if(connection_status == 1)
@@ -934,11 +933,11 @@ void main_logic_mode_set(enum mode_e mode)
 //						
 
 //#endif
-//						
-//				}
-//				
-//				key_scan_param.pwr_btn_reset_cnt_clear_interval_time++;
-//						
+						
+				}
+				
+				key_scan_param.pwr_btn_reset_cnt_clear_interval_time++;
+						
 //#ifdef Non_intelligent_version		
 
 ////				if(connection_status == 1)
@@ -953,71 +952,71 @@ void main_logic_mode_set(enum mode_e mode)
 //				
 //				
 //#endif
-//				
-//				if(key_scan_param.pwr_btn_mode == pre_single_click)
-//				{
-//						key_scan_param.pwr_btn_off_time++;
-//					
-//						if(key_scan_param.pwr_btn_off_time > DOUBLE_PRESS_INTERVAL_TIME)
-//						{
-//								key_scan_param.pwr_btn_mode = single_click;
-//								key_scan_param.pwr_btn_off_time = 0;
-//						}
-//				}
-//				
-//				
-//				key_scan_param.pwr_btn_last_status = 0;
-//		}
-//		
-//		
-//		if(main_logic_set_btn() == 1)
-//		{
-//				if(key_scan_param.set_btn_last_status == 0)
-//				{
-//						key_scan_param.set_btn_on_time = 0;
-//				}
-//				key_scan_param.set_btn_on_time++;
-//				
-//				if(key_scan_param.set_btn_on_time > LONG_PRESS_TIME)
-//				{
-//						key_scan_param.set_btn_mode = long_press;
-//				}
-//				key_scan_param.set_btn_last_status = 1;
-//				
-//				main_sleep_tick_clear();
+				
+				if(key_scan_param.pwr_btn_mode == pre_single_click)
+				{
+						key_scan_param.pwr_btn_off_time++;
+					
+						if(key_scan_param.pwr_btn_off_time > DOUBLE_PRESS_INTERVAL_TIME)
+						{
+								key_scan_param.pwr_btn_mode = single_click;
+								key_scan_param.pwr_btn_off_time = 0;
+						}
+				}
+				
+				
+				key_scan_param.pwr_btn_last_status = 0;
+		}
+		
+		
+		if(main_logic_set_btn() == 1)
+		{
+				if(key_scan_param.set_btn_last_status == 0)
+				{
+						key_scan_param.set_btn_on_time = 0;
+				}
+				key_scan_param.set_btn_on_time++;
+				
+				if(key_scan_param.set_btn_on_time > LONG_PRESS_TIME)
+				{
+						key_scan_param.set_btn_mode = long_press;
+				}
+				key_scan_param.set_btn_last_status = 1;
+				
+				main_sleep_tick_clear();
 //				led_sleep_tick_clear();
-//		}
-//		else
-//		{
-//				if(key_scan_param.set_btn_last_status == 1)
-//				{
-//					
-//						if(key_scan_param.set_btn_mode == pre_single_click)
-//						{
-//								key_scan_param.set_btn_mode = double_click;
-//								key_scan_param.set_btn_off_time = 0;
-//						}
-//						if(key_scan_param.set_btn_mode == idle)
-//						{
-//								key_scan_param.set_btn_mode = pre_single_click;
-//						}
-//				}
-//				
-//				if(key_scan_param.set_btn_mode == pre_single_click)
-//				{
-//						key_scan_param.set_btn_off_time++;
-//					
-//						if(key_scan_param.set_btn_off_time > DOUBLE_PRESS_INTERVAL_TIME)
-//						{
-//								key_scan_param.set_btn_mode = single_click;
-//								key_scan_param.set_btn_off_time = 0;
-//						}
-//				}
-//				
-//				
-//				key_scan_param.set_btn_last_status = 0;
-//		}
-//}
+		}
+		else
+		{
+				if(key_scan_param.set_btn_last_status == 1)
+				{
+					
+						if(key_scan_param.set_btn_mode == pre_single_click)
+						{
+								key_scan_param.set_btn_mode = double_click;
+								key_scan_param.set_btn_off_time = 0;
+						}
+						if(key_scan_param.set_btn_mode == idle)
+						{
+								key_scan_param.set_btn_mode = pre_single_click;
+						}
+				}
+				
+				if(key_scan_param.set_btn_mode == pre_single_click)
+				{
+						key_scan_param.set_btn_off_time++;
+					
+						if(key_scan_param.set_btn_off_time > DOUBLE_PRESS_INTERVAL_TIME)
+						{
+								key_scan_param.set_btn_mode = single_click;
+								key_scan_param.set_btn_off_time = 0;
+						}
+				}
+				
+				
+				key_scan_param.set_btn_last_status = 0;
+		}
+}
 
 
 //uint32_t key_power_off_tick = 0;
@@ -1091,10 +1090,10 @@ void main_sleep_tick_clear(void)
 
 
 
-//void led_sleep_tick_clear(void)
-//{
-//		led_sleep_tick_count = 0;
-//}
+void led_sleep_tick_clear(void)
+{
+		led_sleep_tick_count = 0;
+}
 
 //void led_sleep_tick(void)
 //{
@@ -1147,44 +1146,44 @@ void main_sleep_tick_clear(void)
 //		}
 //}
 
-//void main_param_time_increase(void)
-//{
-//		if((main_logic_mode == mode_0_working)||(main_logic_mode == mode_2_working)||(main_logic_mode == mode_1_working))
-//		{
-//				mode_param.time++;
-//				if(mode_param.time % 164 == 0)
-//				{
-////						ble_dp_return_rt_data(mode_param.cyc_count, mode_param.time / 164, calorie_cal_main_logic(mode_param.cyc_count, mode_param.time / 164));
-//					
-//						ble_dp_return_rt_time(mode_param.time / 164);
-//						if(mode_param.sec_hall_count == 0)
-//						{
-//								if(mode_param.hall_stop_led_trigger < 10)
-//								{
-//										mode_param.hall_stop_led_trigger++;
-//								}
-//								
-//								if(mode_param.hall_stop_led_trigger == 2)
-//								{
-//										ledseg_show_digits_blinky_once_triggle();
-//								}
-//						}
-//						
+void main_param_time_increase(void)
+{
+		if((main_logic_mode == mode_0_working)||(main_logic_mode == mode_2_working)||(main_logic_mode == mode_1_working))
+		{
+				mode_param.time++;
+				if(mode_param.time % 164 == 0)
+				{
+
+					
+						ble_dp_return_rt_time(mode_param.time / 164);
+						if(mode_param.sec_hall_count == 0)
+						{
+								if(mode_param.hall_stop_led_trigger < 10)
+								{
+										mode_param.hall_stop_led_trigger++;
+								}
+								
+								if(mode_param.hall_stop_led_trigger == 2)
+								{
+										// ledseg_show_digits_blinky_once_triggle();
+								}
+						}
+						
 ////						uart_printf("led %d %d\r\n",mode_param.sec_hall_count, mode_param.hall_stop_led_trigger);
-//						mode_param.sec_hall_count = 0;
-//				}
-//		}
-//}
+						mode_param.sec_hall_count = 0;
+				}
+		}
+}
 
-//void main_logic_target_time_set(uint32_t target_time)
-//{
-//		mode_param.target_time = target_time;
-//}
+void main_logic_target_time_set(uint32_t target_time)
+{
+		mode_param.target_time = target_time;
+}
 
-//void main_logic_target_count_set(uint32_t target_count)
-//{
-//		mode_param.target_count = target_count;
-//}
+void main_logic_target_count_set(uint32_t target_count)
+{
+		mode_param.target_count = target_count;
+}
 
 
 

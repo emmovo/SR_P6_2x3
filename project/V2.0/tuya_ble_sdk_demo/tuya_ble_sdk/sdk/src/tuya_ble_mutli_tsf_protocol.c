@@ -26,6 +26,7 @@
 #include "tuya_ble_type.h"
 #include "tuya_ble_mem.h"
 #include "tuya_ble_mutli_tsf_protocol.h"
+#include "tuya_ble_log.h"
 
 #define __MUTLI_TSF_PROTOCOL_GLOBALS
 
@@ -680,6 +681,7 @@ mtp_ret data_2_klvlist(uint8_t *data,uint32_t len,klv_node_s **list,uint8_t type
     //The data is parsed into a list of dp points  dpid+dp_tp+len+data
     if(NULL == data || NULL == list)
     {
+        TY_PRINTF("!!!!!!");
         return MTP_INVALID_PARAM;
     }
 
