@@ -28,26 +28,27 @@ uint32_t ble_dp_data_sn = 0;
 
 tuya_ble_status_t tuya_ble_dp_data_report(uint8_t *p_data,uint32_t len)
 {
-		// return tuya_ble_dp_data_send(ble_dp_data_sn++, 
-		// 							DP_SEND_TYPE_ACTIVE,
-		// 							DP_SEND_FOR_CLOUD_PANEL,
-		// 							DP_SEND_WITHOUT_RESPONSE,
-		// 							p_data,
-		// 							len);
 
+		uint8_t temp_data[30];
 		tuya_ble_status_t err = 0;
+
+		temp_data[0] = p_data[0];
+		temp_data[1] = p_data[1];
+		temp_data[2] = 0;
+
+		memcpy(temp_data + 3, p_data + 2, len - 2);
 
 		 err = tuya_ble_dp_data_send(ble_dp_data_sn++, 
 									DP_SEND_TYPE_ACTIVE,
 									DP_SEND_FOR_CLOUD_PANEL,
 									DP_SEND_WITHOUT_RESPONSE,
-									p_data,
-									len);
+									temp_data,
+									len + 1);
 	
 		uint8_t p = 0;
-		for(p = 0; p < len; p++)
+		for(p = 0; p < len + 1; p++)
 		{
-				TY_PRINTF("%d", p_data[p]);
+				TY_PRINTF("%d", temp_data[p]);
 		}
 
 		TY_PRINTF("send err: %d", err);
@@ -61,6 +62,14 @@ tuya_ble_status_t tuya_ble_dp_data_with_time_report(uint32_t timestamp,uint8_t *
 		uint8_t time_stramp_char[13] = {0};
 		uint8_t p = 0;
 		uint32_t temp = 1000000000;
+		
+		uint8_t temp_data[30];
+		
+		temp_data[0] = p_data[0];
+		temp_data[1] = p_data[1];
+		temp_data[2] = 0;
+
+		memcpy(temp_data + 3, p_data + 2, len - 2);
 		
 		for(p = 0; p < 10; p++)
 		{
@@ -76,12 +85,14 @@ tuya_ble_status_t tuya_ble_dp_data_with_time_report(uint32_t timestamp,uint8_t *
 		time_stramp_char[12] = '0';
 		
 		
+		
+		
 		return tuya_ble_dp_data_with_time_send(ble_dp_data_sn++,
 												DP_SEND_FOR_CLOUD_PANEL,
 												DP_TIME_TYPE_UNIX_TIMESTAMP,
 												time_stramp_char,
-												p_data,
-												len);
+												temp_data,
+												len + 1);
 }
 
 #endif
@@ -495,7 +506,7 @@ void ble_app(void)
 		{
 			if (rx_data[3] == 0)
 			{
-				// main_logic_mode_end();
+				main_logic_mode_end();
 				
 					#ifdef debug_uart
 	
@@ -509,7 +520,7 @@ void ble_app(void)
 			else if (rx_data[3] == 1)
 			{
 
-				// main_logic_mode_start();
+				main_logic_mode_start();
 				
 					#ifdef debug_uart
 	
@@ -527,11 +538,11 @@ void ble_app(void)
 			
 			if(rx_data[3])
 			{
-					// main_logic_mode_pause();
+					main_logic_mode_pause();
 			}
 			else
 			{
-					// main_logic_mode_continue();
+					main_logic_mode_continue();
 			}
 			
 								#ifdef debug_uart
@@ -576,16 +587,16 @@ void ble_app(void)
 		{
 			uint16_t time = (uint16_t)(rx_data[5] << 8 | rx_data[6]);
 			
-			// main_logic_target_time_set(time);
+			main_logic_target_time_set(time);
 			
-			// tuya_ble_dp_data_report(rx_data, 7);
+			tuya_ble_dp_data_report(rx_data, 7);
 
 			
 			break;
 		}
 	case 15:
 		{
-			// main_logic_target_count_set((uint16_t)(rx_data[5] << 8 | rx_data[6]));
+			main_logic_target_count_set((uint16_t)(rx_data[5] << 8 | rx_data[6]));
 			tuya_ble_dp_data_report(rx_data, 7);
 			break;
 		}
