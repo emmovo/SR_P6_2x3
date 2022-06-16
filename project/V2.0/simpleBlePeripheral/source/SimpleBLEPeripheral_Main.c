@@ -104,13 +104,13 @@ int app_main(void)
 	
 		hal_gpio_pull_set(GPIO_P25, GPIO_FLOATING);
 	
-		for(uint8_t i = 0; i < 5; i++)
-		{
-			hal_gpio_write(GPIO_P32, false);
-			WaitMs(200);
-			hal_gpio_write(GPIO_P32, true); 
-			WaitMs(200);
-		}
+		// for(uint8_t i = 0; i < 5; i++)
+		// {
+		// 	hal_gpio_write(GPIO_P32, false);
+		// 	WaitMs(200);
+		// 	hal_gpio_write(GPIO_P32, true); 
+		// 	WaitMs(200);
+		// }
 	
 
 
