@@ -155,7 +155,7 @@ const pTaskEventHandlerFn tasksArr[] =
     SimpleBLEPeripheral_ProcessEvent,                                 // task 8
     phy_timer_ProcessEvent,                                           // task 9
 //		test_task,
-		app_task,
+	app_task,
 };
 
 const uint8 tasksCnt = sizeof( tasksArr ) / sizeof( tasksArr[0] );

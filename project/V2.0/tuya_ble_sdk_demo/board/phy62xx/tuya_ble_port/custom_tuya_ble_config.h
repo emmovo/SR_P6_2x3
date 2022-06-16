@@ -110,7 +110,7 @@ extern "C"
 /*
  * if defined ,enable app log output
  */
-#define TUYA_APP_LOG_ENABLE                 0 //TY_LOG_ENABLE
+#define TUYA_APP_LOG_ENABLE                 1 //TY_LOG_ENABLE
 #define TUYA_APP_LOG_COLORS_ENABLE          0
 #define TUYA_APP_LOG_LEVEL  TUYA_APP_LOG_LEVEL_DEBUG
 

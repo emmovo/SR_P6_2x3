@@ -50,8 +50,8 @@ extern "C"
 //#define TY_DEVICE_HVER_STR    "1.0"
 
 #define TY_DEVICE_FIR_NAME    "SmartRope"
-#define TY_DEVICE_FVER_NUM    0x0308
-#define TY_DEVICE_FVER_STR    "3.8"
+#define TY_DEVICE_FVER_NUM    0x0400
+#define TY_DEVICE_FVER_STR    "4.0"
 #define TY_DEVICE_HVER_NUM    0x00000100
 #define TY_DEVICE_HVER_STR    "1.0"
 

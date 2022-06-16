@@ -41,17 +41,16 @@ tuya_ble_status_t tuya_ble_dp_data_report(uint8_t *p_data,uint32_t len)
 		 err = tuya_ble_dp_data_send(ble_dp_data_sn++, 
 									DP_SEND_TYPE_ACTIVE,
 									DP_SEND_FOR_CLOUD_PANEL,
-									DP_SEND_WITHOUT_RESPONSE,
+									DP_SEND_WITH_RESPONSE,
 									temp_data,
 									len + 1);
-	
-		uint8_t p = 0;
-		for(p = 0; p < len + 1; p++)
-		{
-				TY_PRINTF("%d", temp_data[p]);
-		}
 
-		TY_PRINTF("send err: %d", err);
+		TY_PRINTF("\r");
+		TY_PRINTF("=====================================");		
+		TY_HEXDUMP("mcu send dp data:", temp_data, len + 1);	
+	TY_PRINTF("send err: %d sn: %d", err, ble_dp_data_sn);
+		TY_PRINTF("=====================================");
+		TY_PRINTF("\r");
 
 		return err;
 }
@@ -289,11 +288,10 @@ void ble_dp_return_mode(uint8_t mode)
 	{
 		return;
 	}
-	uint8_t temp_dp[5] =
+	uint8_t temp_dp[4] =
 	{
 		3,
 		4,
-		0,
 		1,
 		mode,
 	};
@@ -318,7 +316,7 @@ void ble_dp_return_mode(uint8_t mode)
 	}
 	
 	#endif
-	tuya_ble_dp_data_report(temp_dp, 5);
+	tuya_ble_dp_data_report(temp_dp, 4);
 }
 
 bool ble_finish_dp_offline_exist = false;
@@ -404,16 +402,15 @@ void ble_dp_return_target_time(uint16_t time)
 	{
 		return;
 	}
-	uint8_t temp_dp[6] =
+	uint8_t temp_dp[5] =
 	{
 		14,
 		2,
-		0,
 		2,
 		time>>8,
 		time
 	};
-	tuya_ble_dp_data_report(temp_dp, 6);
+	tuya_ble_dp_data_report(temp_dp, 5);
 }
 void ble_dp_return_target_cnt(uint16_t cnt)
 {
@@ -484,9 +481,22 @@ void ble_receive_dp(uint8_t *data, uint8_t len)
 		uart_putchar("\r\n");
 		
 		#endif
-		
-		TY_HEXDUMP("BLE dp data:", rx_data, rx_data_len);
 	
+		TY_PRINTF("\r");
+		TY_PRINTF("=====================================");		
+		TY_HEXDUMP("mcu receive dp data:", rx_data, len);	
+		TY_PRINTF("=====================================");
+		TY_PRINTF("\r");
+
+
+#ifdef	BOARD_BT612_4
+
+	memcpy(rx_data + 2, rx_data + 3, len - 3);
+
+#endif
+		
+
+		
 	TUYA_APP_LOG_HEXDUMP_INFO("BLE dp data:", rx_data, rx_data_len);
 		
 }
