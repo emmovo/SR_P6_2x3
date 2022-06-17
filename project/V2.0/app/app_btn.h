@@ -12,4 +12,4 @@
 #include <stdbool.h>
 
 void btn_init(void);
-
+void btn_dk_init(void);
