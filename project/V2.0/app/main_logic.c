@@ -704,6 +704,8 @@ void main_logic_mode_set(enum mode_e mode)
 void main_logic_mode_start(void)
 {
 		mode_param_init();
+
+		
 	
 		if(main_logic_mode == mode_0_idle)
 		{
@@ -714,6 +716,8 @@ void main_logic_mode_start(void)
 				
 				ble_dp_return_pause(0);
 				ble_dp_return_start();
+
+				
 				
 		}
 		
@@ -744,8 +748,12 @@ void main_logic_mode_start(void)
 
 void main_logic_mode_end(void)
 {
+
+		TY_PRINTF("============= TEST 1============ %d", main_logic_mode);
+
 		if((main_logic_mode == mode_0_working)||(main_logic_mode == mode_0_pause)||(main_logic_mode == mode_0_ready))
 		{
+				TY_PRINTF("============= TEST 2============");
 				main_logic_mode = mode_0_idle;
 				ble_dp_return_finish(0, mode_param.cyc_count, mode_param.time / 164, calorie_cal_main_logic(mode_param.cyc_count, mode_param.time /164));
 

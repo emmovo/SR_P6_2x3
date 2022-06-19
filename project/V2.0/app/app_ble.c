@@ -123,7 +123,42 @@ void ble_dp_return_rt_data(uint16_t count, uint16_t time,uint16_t calorie)
 	{
 		return;
 	}
+
+#ifdef BOARD_BT612_4
 	
+	uint8_t temp_dp_count[5] =
+	{
+		4,
+		2,
+		2,
+		count >> 8,
+		count,
+	};
+
+	tuya_ble_dp_data_report(temp_dp_count, 5);
+
+	uint8_t temp_dp_time[5] =
+	{
+		5,
+		2,
+		2, 
+		time >> 8, 
+		time,
+	};
+	tuya_ble_dp_data_report(temp_dp_time, 15);
+
+	uint8_t temp_dp_calorie[15] =
+	{
+		6,
+		2,
+		2,
+		calorie>>8,
+		calorie
+	};
+	tuya_ble_dp_data_report(temp_dp_calorie, 5);
+
+#else
+
 	uint8_t temp_dp[15] =
 	{
 		4,
@@ -139,6 +174,8 @@ void ble_dp_return_rt_data(uint16_t count, uint16_t time,uint16_t calorie)
 		6,2,2,calorie>>8,calorie
 	};
 	tuya_ble_dp_data_report(temp_dp, 15);
+
+#endif
 	
 }
 
@@ -149,8 +186,33 @@ void ble_dp_return_rt_data_no_time(uint16_t count,uint16_t calorie)
 	{
 		return;
 	}
+
+#ifdef BOARD_BT612_4
 	
-	uint8_t temp_dp[15] =
+	uint8_t temp_dp_count[5] =
+	{
+		4,
+		2,
+		2,
+		count >> 8,
+		count,
+	};
+
+	tuya_ble_dp_data_report(temp_dp_count, 5);
+
+	uint8_t temp_dp_calorie[5] =
+	{
+		6,
+		2,
+		2,
+		calorie>>8,
+		calorie
+	};
+	tuya_ble_dp_data_report(temp_dp_calorie, 5);
+
+#else
+
+	uint8_t temp_dp[10] =
 	{
 		4,
 		2,
@@ -160,6 +222,8 @@ void ble_dp_return_rt_data_no_time(uint16_t count,uint16_t calorie)
 		6,2,2,calorie>>8,calorie
 	};
 	tuya_ble_dp_data_report(temp_dp, 10);
+
+#endif
 	
 }
 
@@ -202,13 +266,6 @@ void ble_dp_return_stop(void)
 		0,
 	};
 	
-	#ifdef debug_uart
-
-	char a[10] = "stop\r\n";
-
-	uart_send(a, 10);
-
-	#endif
 
 	tuya_ble_dp_data_report(temp_dp, 4);
 }
@@ -219,6 +276,23 @@ void ble_dp_return_state(bool state)
 	{
 		return;
 	}
+
+
+#ifdef BOARD_BT612_4
+
+	uint8_t temp_dp[4] =
+	{
+		1,
+		1,
+		1,
+		state,
+	};
+	
+	tuya_ble_dp_data_report(temp_dp, 4);
+	ble_dp_return_pause(false);
+
+#else
+
 	uint8_t temp_dp[8] =
 	{
 		1,
@@ -226,27 +300,15 @@ void ble_dp_return_state(bool state)
 		1,
 		state,
 		2,
-		1,
+		1, 
 		1,
 		0,
 	};
 	
-	#ifdef debug_uart
-
-	char a[10] = "start\r\n";
-	char b[10] = "stop\r\n";
-	if(state)
-	{
-			uart_send(a, 10);
-	}
-	else
-	{
-			uart_send(b, 10);
-	}
-
-	#endif
-
 	tuya_ble_dp_data_report(temp_dp, 8);
+
+#endif
+
 }
 
 void ble_dp_return_pause(bool pause)
@@ -328,7 +390,7 @@ void ble_dp_return_finish(uint8_t mode, uint16_t total_cnt, uint16_t total_time,
 	static uint8_t of_mode;
 	static uint16_t of_cnt, of_time, of_cal;
 		
-	
+	TY_PRINTF("============= TEST 3============");
 	if (!connection_status)
 	{
 		TUYA_BLE_LOG_INFO(" offline data set \r\n");
@@ -341,6 +403,9 @@ void ble_dp_return_finish(uint8_t mode, uint16_t total_cnt, uint16_t total_time,
 		
 		return;
 	}
+	
+	
+	
 	if (connection_status&&ble_finish_dp_offline_exist)
 	{
 		
@@ -350,9 +415,63 @@ void ble_dp_return_finish(uint8_t mode, uint16_t total_cnt, uint16_t total_time,
 		ble_dp_return_finish(of_mode, of_cnt, of_time, of_cal);
 		return;
 	}
+
 	
 	
-	
+#ifdef BOARD_BT612_4
+
+	ble_dp_return_stop();
+	ble_dp_return_pause(false);
+	ble_dp_return_mode(mode);
+
+	uint32_t timestamp_valse;
+
+	timestamp_valse = timestamp_get();
+
+	TY_PRINTF("===== timestamp %d =====", timestamp_valse);
+
+	if(total_cnt == 0)
+	{
+		total_time = 0;
+		total_calorie = 0;
+	}
+
+	uint8_t temp_dp_count[5] = 
+	{
+		8,
+		2,
+		2,
+		total_cnt >> 8,
+		total_cnt,
+	};
+
+	tuya_ble_dp_data_with_time_report(timestamp_valse, temp_dp_count, 5);
+
+	uint8_t temp_dp_time[5] = 
+	{
+		9,
+		2,
+		2,
+		total_time >> 8,
+		total_time,
+	};
+
+	tuya_ble_dp_data_with_time_report(timestamp_valse, temp_dp_time, 5);
+
+	uint8_t temp_dp_calorie[5] = 
+	{
+		10,
+		2,
+		2,
+		total_calorie>>8,
+		total_calorie
+	};
+
+	tuya_ble_dp_data_with_time_report(timestamp_valse, temp_dp_calorie, 5);
+
+
+#else
+
 	uint8_t temp_dp[27] =
 	{
 		1,
@@ -394,6 +513,10 @@ void ble_dp_return_finish(uint8_t mode, uint16_t total_cnt, uint16_t total_time,
 	TUYA_BLE_LOG_INFO("BLE Return finish:%d,%d,%d,%d\r\n", mode, total_cnt, total_time, total_calorie);
 	
 	tuya_ble_dp_data_with_time_report(timestamp_get(), temp_dp, 27);
+
+#endif
+	
+
 }
 
 void ble_dp_return_target_time(uint16_t time)
@@ -514,6 +637,9 @@ void ble_app(void)
 	{
 	case 1:
 		{
+
+			TY_PRINTF("============= TEST ============");
+
 			if (rx_data[3] == 0)
 			{
 				main_logic_mode_end();

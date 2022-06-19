@@ -33,7 +33,7 @@ extern "C"
 //FIR - firmware, FVER - firmware version, HVER - hardware version
 #define TY_DEVICE_NAME        "TY"
 	
-//#define TY_DEVICE_PID         "2ewvra2e" //"suq5jmo5"(nRF52832) "p7ncbdgh"(watch) "2ewvra2e"(PHY6222)
+//#define TY_DEVICE_PID         "suq5jmo5" //"suq5jmo5"(nRF52832) "p7ncbdgh"(watch) "2ewvra2e"(PHY6222)
 	
 // #define TY_DEVICE_PID         "uficjten"
 

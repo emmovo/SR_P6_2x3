@@ -1,8 +1,8 @@
 /*
  * @Author: emmovo
  * @Date: 2022-06-06 13:36:38
- * @LastEditors: emmovo
- * @LastEditTime: 2022-06-14 16:50:35
+ * @LastEditors: emmovo mingjkl@live.com
+ * @LastEditTime: 2022-06-19 23:21:14
  * @FilePath: \skippingRope_phy6222\project\V2.0\app\app_soc.c
  * @Description: 
  * 
@@ -346,7 +346,7 @@ void battery_check(void)
 
 void Battery_Upload_BLE(void)
 {
-		ble_dp_return_bat(100);	//test;
+		ble_dp_return_bat(2);	//test;
 //	ble_dp_return_bat(bat_val);
 }
 
