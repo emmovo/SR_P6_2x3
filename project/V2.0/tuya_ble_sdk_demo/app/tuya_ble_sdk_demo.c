@@ -131,6 +131,9 @@ static void tuya_ble_sdk_callback(tuya_ble_cb_evt_param_t* event)
             
             uint64_t timestamp = 0;
             timestamp = timestamp_s*1000 + timestamp_ms;
+					
+					
+						timestamp_updata_by_ble(timestamp_s);
             
             ty_rtc_set_time(timestamp_s);
             

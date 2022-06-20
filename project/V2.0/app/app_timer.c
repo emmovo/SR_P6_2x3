@@ -1,9 +1,9 @@
 /*
  * @Author: emmovo mingjkl@live.com
  * @Date: 2022-06-04 17:28:45
- * @LastEditors: emmovo mingjkl@live.com
- * @LastEditTime: 2022-06-04 17:30:48
- * @FilePath: \V2.0\app\timer.c
+ * @LastEditors: emmovo
+ * @LastEditTime: 2022-06-20 09:35:28
+ * @FilePath: \V2.0\app\app_timer.c
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 
@@ -15,6 +15,7 @@
 
 #include "app_timer.h"
 
+volatile uint32_t sys_10ms_tick = 0;
 
 void timer_init(void)
 {
@@ -31,7 +32,7 @@ uint32_t timer_get_systick(void)
 
 void tick_10ms_timer_handler(uint8_t evt)
 {
-//	sys_10ms_tick++;
+	sys_10ms_tick++;
 //	main_param_time_increase();
 //	main_logic_key_scan();
 //	led_blinky_ctrl();
@@ -46,7 +47,7 @@ void tick_10ms_init(void)
 }
 
 
-volatile uint32_t sys_10ms_tick = 0;
+
  
 uint32_t tick_10ms_get(void)
 {

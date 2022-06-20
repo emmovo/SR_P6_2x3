@@ -1,3 +1,13 @@
+/*
+ * @Author: emmovo
+ * @Date: 2022-06-06 13:36:38
+ * @LastEditors: emmovo
+ * @LastEditTime: 2022-06-20 16:17:26
+ * @FilePath: \V2.0\app\timestamp.c
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by mingjkl@live.com/emmovo.com, All Rights Reserved. 
+ */
 #include "timestamp.h"
 #include "app_timer.h"
 
@@ -39,6 +49,15 @@ void timestamp_update(void)
 		start_tick = timer_get_systick();
 	}
 }
+
+#if (TUYA_BLE_PROTOCOL_VERSION_HIGN == 0x04)
+
+void timestamp_updata_by_ble(uint32_t timestamp)
+{
+	ble_unix_time = timestamp;
+}
+
+#endif
 
 uint32_t timestamp_get(void)
 {

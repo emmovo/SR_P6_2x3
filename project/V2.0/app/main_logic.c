@@ -751,6 +751,15 @@ void main_logic_mode_end(void)
 
 		TY_PRINTF("============= TEST 1============ %d", main_logic_mode);
 
+		#if (TUYA_BLE_PROTOCOL_VERSION_HIGN == 0x04)
+
+		if(main_logic_mode == mode_0_idle)
+		{
+			ble_dp_return_stop();
+		}
+
+		#endif
+
 		if((main_logic_mode == mode_0_working)||(main_logic_mode == mode_0_pause)||(main_logic_mode == mode_0_ready))
 		{
 				TY_PRINTF("============= TEST 2============");

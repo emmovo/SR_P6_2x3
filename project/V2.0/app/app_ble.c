@@ -20,7 +20,7 @@ extern uint32_t common_weight;
 bool start_lock = false;
 
 
-#ifdef	BOARD_BT612_4
+#if (TUYA_BLE_PROTOCOL_VERSION_HIGN == 0x04)
 
 uint32_t ble_dp_data_sn = 0;
 
@@ -124,7 +124,7 @@ void ble_dp_return_rt_data(uint16_t count, uint16_t time,uint16_t calorie)
 		return;
 	}
 
-#ifdef BOARD_BT612_4
+#if (TUYA_BLE_PROTOCOL_VERSION_HIGN == 0x04)
 	
 	uint8_t temp_dp_count[5] =
 	{
@@ -187,7 +187,7 @@ void ble_dp_return_rt_data_no_time(uint16_t count,uint16_t calorie)
 		return;
 	}
 
-#ifdef BOARD_BT612_4
+#if (TUYA_BLE_PROTOCOL_VERSION_HIGN == 0x04)
 	
 	uint8_t temp_dp_count[5] =
 	{
@@ -278,7 +278,7 @@ void ble_dp_return_state(bool state)
 	}
 
 
-#ifdef BOARD_BT612_4
+#if (TUYA_BLE_PROTOCOL_VERSION_HIGN == 0x04)
 
 	uint8_t temp_dp[4] =
 	{
@@ -418,7 +418,7 @@ void ble_dp_return_finish(uint8_t mode, uint16_t total_cnt, uint16_t total_time,
 
 	
 	
-#ifdef BOARD_BT612_4
+#if (TUYA_BLE_PROTOCOL_VERSION_HIGN == 0x04)
 
 	ble_dp_return_stop();
 	ble_dp_return_pause(false);
@@ -612,7 +612,7 @@ void ble_receive_dp(uint8_t *data, uint8_t len)
 		TY_PRINTF("\r");
 
 
-#ifdef	BOARD_BT612_4
+#if (TUYA_BLE_PROTOCOL_VERSION_HIGN == 0x04)
 
 	memcpy(rx_data + 2, rx_data + 3, len - 3);
 
