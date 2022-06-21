@@ -11,3 +11,4 @@
 
 
 #define BOARD_BT612_4
+#define APP_DEBUG_LOG

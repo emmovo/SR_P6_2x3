@@ -45,12 +45,16 @@ tuya_ble_status_t tuya_ble_dp_data_report(uint8_t *p_data,uint32_t len)
 									temp_data,
 									len + 1);
 
+#ifdef	APP_DEBUG_LOG
+
 		TY_PRINTF("\r");
 		TY_PRINTF("=====================================");		
 		TY_HEXDUMP("mcu send dp data:", temp_data, len + 1);	
 	TY_PRINTF("send err: %d sn: %d", err, ble_dp_data_sn);
 		TY_PRINTF("=====================================");
 		TY_PRINTF("\r");
+
+#endif
 
 		return err;
 }
@@ -112,6 +116,12 @@ void ble_dp_return_rt_time(uint16_t time)
 		time >> 8, 
 		time,
 	};
+
+	#ifdef	APP_DEBUG_LOG
+
+	TY_PRINTF(" >>>>>>   mcu updata rt time %d   >>>>>>", time);	
+
+	#endif
 	tuya_ble_dp_data_report(temp_dp, 5);
 	
 }
@@ -137,6 +147,12 @@ void ble_dp_return_rt_data(uint16_t count, uint16_t time,uint16_t calorie)
 
 	tuya_ble_dp_data_report(temp_dp_count, 5);
 
+	#ifdef	APP_DEBUG_LOG
+
+	TY_PRINTF(" >>>>>>   mcu updata rt count %d   >>>>>>", count);	
+
+	#endif
+
 	uint8_t temp_dp_time[5] =
 	{
 		5,
@@ -147,6 +163,13 @@ void ble_dp_return_rt_data(uint16_t count, uint16_t time,uint16_t calorie)
 	};
 	tuya_ble_dp_data_report(temp_dp_time, 15);
 
+	#ifdef	APP_DEBUG_LOG
+
+	TY_PRINTF(" >>>>>>   mcu updata rt time %d   >>>>>>", time);	
+
+	#endif
+
+
 	uint8_t temp_dp_calorie[15] =
 	{
 		6,
@@ -156,6 +179,12 @@ void ble_dp_return_rt_data(uint16_t count, uint16_t time,uint16_t calorie)
 		calorie
 	};
 	tuya_ble_dp_data_report(temp_dp_calorie, 5);
+
+	#ifdef	APP_DEBUG_LOG
+
+	TY_PRINTF(" >>>>>>   mcu updata rt calorie %d   >>>>>>", calorie);	
+
+	#endif
 
 #else
 
@@ -200,6 +229,12 @@ void ble_dp_return_rt_data_no_time(uint16_t count,uint16_t calorie)
 
 	tuya_ble_dp_data_report(temp_dp_count, 5);
 
+	#ifdef	APP_DEBUG_LOG
+
+	TY_PRINTF(" >>>>>>   mcu updata rt count %d   >>>>>>", count);	
+
+	#endif
+
 	uint8_t temp_dp_calorie[5] =
 	{
 		6,
@@ -209,6 +244,12 @@ void ble_dp_return_rt_data_no_time(uint16_t count,uint16_t calorie)
 		calorie
 	};
 	tuya_ble_dp_data_report(temp_dp_calorie, 5);
+
+	#ifdef	APP_DEBUG_LOG
+
+	TY_PRINTF(" >>>>>>   mcu updata rt calorie %d   >>>>>>", calorie);	
+
+	#endif
 
 #else
 
@@ -241,15 +282,13 @@ void ble_dp_return_start(void)
 		1,
 	};
 	
-	#ifdef debug_uart
+	tuya_ble_dp_data_report(temp_dp, 4);
 
-	char a[10] = "start\r\n";
+	#ifdef	APP_DEBUG_LOG
 
-	uart_send(a, 10);
+	TY_PRINTF(" >>>>>>   mcu updata start   >>>>>>");	
 
 	#endif
-
-	tuya_ble_dp_data_report(temp_dp, 4);
 }
 
 void ble_dp_return_stop(void)
@@ -268,6 +307,12 @@ void ble_dp_return_stop(void)
 	
 
 	tuya_ble_dp_data_report(temp_dp, 4);
+
+	#ifdef	APP_DEBUG_LOG
+
+	TY_PRINTF(" >>>>>>   mcu updata stop   >>>>>>");	
+
+	#endif
 }
 
 void ble_dp_return_state(bool state)
@@ -280,15 +325,15 @@ void ble_dp_return_state(bool state)
 
 #if (TUYA_BLE_PROTOCOL_VERSION_HIGN == 0x04)
 
-	uint8_t temp_dp[4] =
+	if(state == true)
 	{
-		1,
-		1,
-		1,
-		state,
-	};
-	
-	tuya_ble_dp_data_report(temp_dp, 4);
+		ble_dp_return_start();
+	}
+	else
+	{
+		ble_dp_return_stop();
+	}
+
 	ble_dp_return_pause(false);
 
 #else
@@ -325,19 +370,17 @@ void ble_dp_return_pause(bool pause)
 		pause,
 	};
 	
-	#ifdef debug_uart
+	#ifdef	APP_DEBUG_LOG
 	
-	char a[10] = "pause\r\n";
-	char b[10] = "go on\r\n";
-	if(pause)
+	if(pause == true)
 	{
-			uart_send(a, 10);
+		TY_PRINTF(" >>>>>>   mcu updata pause   >>>>>>");
 	}
 	else
 	{
-			uart_send(b, 10);
+		TY_PRINTF(" >>>>>>   mcu updata go on   >>>>>>");
 	}
-	
+
 	#endif
 	
 	tuya_ble_dp_data_report(temp_dp, 4);
@@ -357,28 +400,14 @@ void ble_dp_return_mode(uint8_t mode)
 		1,
 		mode,
 	};
-	
-	
-	#ifdef debug_uart
-	
-	char a[10] = "mode 0\r\n";
-	char b[10] = "mode 1\r\n";
-	char c[10] = "mode 2\r\n";
-	if(mode == 0)
-	{
-			uart_send(a, 10);
-	}
-	if(mode == 1)
-	{
-			uart_send(b, 10);
-	}
-	if(mode == 2)
-	{
-			uart_send(c, 10);
-	}
+
+	tuya_ble_dp_data_report(temp_dp, 4);
+
+	#ifdef	APP_DEBUG_LOG
+
+	TY_PRINTF(" >>>>>>   mcu updata mode %d   >>>>>>", mode);
 	
 	#endif
-	tuya_ble_dp_data_report(temp_dp, 4);
 }
 
 bool ble_finish_dp_offline_exist = false;
@@ -390,7 +419,7 @@ void ble_dp_return_finish(uint8_t mode, uint16_t total_cnt, uint16_t total_time,
 	static uint8_t of_mode;
 	static uint16_t of_cnt, of_time, of_cal;
 		
-	TY_PRINTF("============= TEST 3============");
+
 	if (!connection_status)
 	{
 		TUYA_BLE_LOG_INFO(" offline data set \r\n");
@@ -447,6 +476,12 @@ void ble_dp_return_finish(uint8_t mode, uint16_t total_cnt, uint16_t total_time,
 
 	tuya_ble_dp_data_with_time_report(timestamp_valse, temp_dp_count, 5);
 
+	#ifdef	APP_DEBUG_LOG
+
+	TY_PRINTF(" >>>>>>   mcu updata total count %d   >>>>>>", total_cnt);
+	
+	#endif
+
 	uint8_t temp_dp_time[5] = 
 	{
 		9,
@@ -458,6 +493,12 @@ void ble_dp_return_finish(uint8_t mode, uint16_t total_cnt, uint16_t total_time,
 
 	tuya_ble_dp_data_with_time_report(timestamp_valse, temp_dp_time, 5);
 
+	#ifdef	APP_DEBUG_LOG
+
+	TY_PRINTF(" >>>>>>   mcu updata total count %d   >>>>>>", total_time);
+	
+	#endif
+
 	uint8_t temp_dp_calorie[5] = 
 	{
 		10,
@@ -468,6 +509,12 @@ void ble_dp_return_finish(uint8_t mode, uint16_t total_cnt, uint16_t total_time,
 	};
 
 	tuya_ble_dp_data_with_time_report(timestamp_valse, temp_dp_calorie, 5);
+
+	#ifdef	APP_DEBUG_LOG
+
+	TY_PRINTF(" >>>>>>   mcu updata total calorie %d   >>>>>>", total_calorie);
+	
+	#endif
 
 
 #else
@@ -534,6 +581,14 @@ void ble_dp_return_target_time(uint16_t time)
 		time
 	};
 	tuya_ble_dp_data_report(temp_dp, 5);
+
+	#ifdef	APP_DEBUG_LOG
+
+	TY_PRINTF(" >>>>>>   mcu updata target time %d   >>>>>>", time);
+	
+	#endif
+
+	
 }
 void ble_dp_return_target_cnt(uint16_t cnt)
 {
@@ -550,6 +605,12 @@ void ble_dp_return_target_cnt(uint16_t cnt)
 		cnt
 	};
 	tuya_ble_dp_data_report(temp_dp, 5);
+
+	#ifdef	APP_DEBUG_LOG
+
+	TY_PRINTF(" >>>>>>   mcu updata target count %d   >>>>>>", cnt);
+	
+	#endif
 }
 void ble_dp_return_bat(uint8_t level)
 {
@@ -565,11 +626,9 @@ void ble_dp_return_bat(uint8_t level)
 		level
 	};
 	
-	#ifdef debug_uart
-	
-	char a[10] = "bat\r\n";
+	#ifdef	APP_DEBUG_LOG
 
-	uart_send(a, 10);
+	TY_PRINTF(" >>>>>>   mcu updata bat %d   >>>>>>", level);
 	
 	#endif
 	
@@ -592,24 +651,16 @@ void ble_receive_dp(uint8_t *data, uint8_t len)
 	rx_data_len = len;
 	rxed = true;
 	
-		#ifdef debug_uart
-		uint8_t i;
-	
-		uart_putchar("receive:");
-		for(i = 0; i < len; i++)
-		{
-				uart_putchar(hex2Str(data[i]));
-				uart_putchar(" ");
-		}
-		uart_putchar("\r\n");
-		
-		#endif
-	
+
+	#ifdef	APP_DEBUG_LOG
+
 		TY_PRINTF("\r");
 		TY_PRINTF("=====================================");		
 		TY_HEXDUMP("mcu receive dp data:", rx_data, len);	
 		TY_PRINTF("=====================================");
 		TY_PRINTF("\r");
+
+	#endif
 
 
 #if (TUYA_BLE_PROTOCOL_VERSION_HIGN == 0x04)
@@ -617,8 +668,6 @@ void ble_receive_dp(uint8_t *data, uint8_t len)
 	memcpy(rx_data + 2, rx_data + 3, len - 3);
 
 #endif
-		
-
 		
 	TUYA_APP_LOG_HEXDUMP_INFO("BLE dp data:", rx_data, rx_data_len);
 		
@@ -638,33 +687,27 @@ void ble_app(void)
 	case 1:
 		{
 
-			TY_PRINTF("============= TEST ============");
-
 			if (rx_data[3] == 0)
 			{
-				main_logic_mode_end();
 				
-					#ifdef debug_uart
-	
-					char a[10] = "ble_stop\r\n";
+				#ifdef	APP_DEBUG_LOG
 
-					uart_send(a, 10);
-					
-					#endif
+				TY_PRINTF(" <<<<<<   mcu receive end   <<<<<<");
+	
+				#endif
+
+				main_logic_mode_end();
 
 			}
 			else if (rx_data[3] == 1)
 			{
+				#ifdef	APP_DEBUG_LOG
 
+				TY_PRINTF(" <<<<<<   mcu receive start   <<<<<<");
+	
+				#endif
 				main_logic_mode_start();
 				
-					#ifdef debug_uart
-	
-					char a[10] = "b_start\r\n";
-
-					uart_send(a, 10);
-					
-					#endif
 			}
 			break;
 		}
@@ -674,54 +717,54 @@ void ble_app(void)
 			
 			if(rx_data[3])
 			{
+					#ifdef	APP_DEBUG_LOG
+
+					TY_PRINTF(" <<<<<<   mcu receive pause   <<<<<<");
+	
+					#endif
 					main_logic_mode_pause();
+	
 			}
 			else
 			{
+					#ifdef	APP_DEBUG_LOG
+
+					TY_PRINTF(" <<<<<<   mcu receive go on   <<<<<<");
+	
+					#endif
 					main_logic_mode_continue();
+					
 			}
 			
-								#ifdef debug_uart
-	
-					char a[10] = "pause ";
-					a[7] = rx_data[3] + '0';
-					uart_send(a, 10);
-					
-					#endif
+
+
 			break;
 		}
 	case 3:
 		{
 
-			
+				#ifdef	APP_DEBUG_LOG
+
+				TY_PRINTF(" <<<<<<   mcu receive mode %d  <<<<<<", rx_data[3]);
+	
+				#endif
+
 				ble_mode_switch(rx_data[3]);
 			
-				#ifdef debug_uart
-	
-				char a[10] = "mode 0\r\n";
-				char b[10] = "mode 1\r\n";
-				char c[10] = "mode 2\r\n";
-			
-				if(rx_data[3] == 0)
-				{
-						uart_send(a, 10);
-				}
-				if(rx_data[3] == 1)
-				{
-						uart_send(b, 10);
-				}
-				if(rx_data[3] == 2)
-				{
-						uart_send(c, 10);
-				}
 				
-				#endif
 	
 			break;
 		}
 	case 14:
 		{
 			uint16_t time = (uint16_t)(rx_data[5] << 8 | rx_data[6]);
+
+			#ifdef	APP_DEBUG_LOG
+
+				TY_PRINTF(" <<<<<<   mcu target time %d  <<<<<<", time);
+	
+			#endif
+
 			
 			main_logic_target_time_set(time);
 			
@@ -732,6 +775,12 @@ void ble_app(void)
 		}
 	case 15:
 		{
+			#ifdef	APP_DEBUG_LOG
+
+				TY_PRINTF(" <<<<<<   mcu target time %d  <<<<<<", (uint16_t)(rx_data[5] << 8 | rx_data[6]));
+	
+			#endif
+
 			main_logic_target_count_set((uint16_t)(rx_data[5] << 8 | rx_data[6]));
 			tuya_ble_dp_data_report(rx_data, 7);
 			break;

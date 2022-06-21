@@ -27,7 +27,11 @@ struct mode_param_s mode_param = {.led_sleep = 0, \
 																	.led_sleep_tick = 0,	\
 																	.power_off = 0,	\
 																	.hall_stop_led_trigger = 0,	\
-																	.sec_hall_count = 0};
+																	.sec_hall_count = 0,	\
+																	.target_count = 100,	\
+																	.target_time = 60,	\
+																	.target_count_level_pointer = 1,	\
+																	.target_time_level_pointer = 1	};
 struct key_scan_param_s key_scan_param = { .pwr_btn_on_time = 0, \
 																						.pwr_btn_off_time = 0, \
 																						.set_btn_on_time = 0, \
